@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es-CO"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hamburguesa 3D — muestra | Vitrina Barrio</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;height:100%;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at 50% 40%,#fff3dc,#f4c27a 70%,#d9822b);color:#4a1f05;overflow:hidden}
+header{position:fixed;top:0;left:0;right:0;padding:14px 18px;text-align:center;z-index:2;pointer-events:none}
+.badge{display:inline-block;background:#c0392b;color:#fff;font-weight:800;font-size:12px;letter-spacing:2px;padding:4px 10px;border-radius:999px}
+h1{margin:8px 0 2px;font-size:clamp(22px,5vw,36px)}.rest{font-weight:700;color:#8a3b0c}.hint{font-size:14px;opacity:.8;margin:4px 0}
+#c{position:fixed;inset:0;width:100%;height:100%;touch-action:none;display:block}
+.pedir{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:2;background:#25D366;color:#fff;text-decoration:none;font-weight:800;font-size:18px;padding:14px 34px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.25);display:flex;gap:8px;align-items:center}
+footer{position:fixed;bottom:4px;width:100%;text-align:center;font-size:11px;opacity:.6;z-index:2}
+</style></head><body>
+<header><span class="badge">MUESTRA</span><h1>Hamburguesa 3D — muestra</h1><div class="rest">🍔 Burger Ejemplo</div><p class="hint">Gírala con el dedo o el mouse · pellizca o usa la rueda para acercar</p></header>
+<canvas id="c"></canvas>
+<a class="pedir" href="https://wa.me/573027742140" target="_blank" rel="noopener">💬 Pedir</a>
+<footer>Demo de Vitrina Barrio · modelo 3D generado por código</footer>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+const cv=document.getElementById('c');const r=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});r.setPixelRatio(Math.min(devicePixelRatio,2));
+const s=new THREE.Scene();const cam=new THREE.PerspectiveCamera(40,1,.1,100);cam.position.set(0,2.6,6.2);
+s.add(new THREE.HemisphereLight(0xfff4e0,0x6b3a1a,1.1));const d=new THREE.DirectionalLight(0xffffff,1.6);d.position.set(3,5,4);s.add(d);
+const M=(c,o={})=>new THREE.MeshStandardMaterial({color:c,roughness:.6,...o});const g=new THREE.Group();s.add(g);
+const add=(geo,m,y,sy=1)=>{const x=new THREE.Mesh(geo,m);x.position.y=y;x.scale.y=sy;g.add(x);return x};
+const bun=M(0xd98a3a,{roughness:.5});
+add(new THREE.CylinderGeometry(1.5,1.4,.45,48),bun,-.9);
+add(new THREE.CylinderGeometry(1.55,1.55,.38,48),M(0x4a2412,{roughness:.8}),-.45);
+const ch=new THREE.BoxGeometry(2.9,.06,2.9);const c1=add(ch,M(0xffc21a,{roughness:.4}),-.22);c1.rotation.y=.4;
+for(let i=0;i<3;i++){const t=add(new THREE.CylinderGeometry(.55,.55,.12,32),M(0xd62d20,{roughness:.35}),-.12);t.position.x=Math.cos(i*2.1)*.75;t.position.z=Math.sin(i*2.1)*.75}
+const lp=new THREE.CylinderGeometry(1.75,1.75,.08,40,1,false);const pos=lp.attributes.position;for(let i=0;i<pos.count;i++){const x=pos.getX(i),z=pos.getZ(i),a=Math.atan2(z,x);if(Math.hypot(x,z)>1.6)pos.setY(i,pos.getY(i)+Math.sin(a*12)*.09)}lp.computeVertexNormals();add(lp,M(0x5cb83a,{side:THREE.DoubleSide}),0);
+const top=add(new THREE.SphereGeometry(1.5,48,24,0,Math.PI*2,0,Math.PI/2),bun,.05,.75);
+const seed=M(0xfff2c8);for(let i=0;i<40;i++){const th=Math.random()*Math.PI*2,ph=Math.acos(1-Math.random()*.8);const sd=new THREE.Mesh(new THREE.SphereGeometry(.05,8,6),seed);sd.scale.set(1,.5,1.8);const p=new THREE.Vector3(Math.sin(ph)*Math.cos(th),Math.cos(ph),Math.sin(ph)*Math.sin(th));sd.position.set(p.x*1.5,.05+p.y*1.5*.75,p.z*1.5);sd.lookAt(sd.position.clone().multiplyScalar(2));g.add(sd)}
+const sh=new THREE.Mesh(new THREE.CircleGeometry(2,40),new THREE.MeshBasicMaterial({color:0x000000,transparent:true,opacity:.18}));sh.rotation.x=-Math.PI/2;sh.position.y=-1.15;s.add(sh);
+const oc=new OrbitControls(cam,cv);oc.enableDamping=true;oc.autoRotate=true;oc.autoRotateSpeed=1.5;oc.enablePan=false;oc.minDistance=3.5;oc.maxDistance=11;oc.target.set(0,-.2,0);
+function rs(){const w=innerWidth,h=innerHeight;r.setSize(w,h,false);cam.aspect=w/h;cam.position.setLength(w<600?8:6.6);cam.updateProjectionMatrix()}addEventListener('resize',rs);rs();
+r.setAnimationLoop(()=>{oc.update();r.render(s,cam)});
+</script></body></html>
