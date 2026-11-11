@@ -1,91 +1,628 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Barbería David Orozco · Vista previa</title>
+<meta name="theme-color" content="#070707">
+<title>Barbería Peluquería David Orozco · Vista previa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+:root{
+  --bg:#070707;
+  --bg2:#101010;
+  --card:#161616;
+  --gold:#c9a227;
+  --gold2:#e8c96a;
+  --gold-dim:rgba(201,162,39,.14);
+  --text:#f4efe6;
+  --muted:#a39d93;
+  --line:rgba(201,162,39,.28);
+  --wa:#25d366;
+  --topbar-h:102px;
+  --radius:16px;
+  --hero:none;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#0f0f10;color:#eee;line-height:1.5}
+html{scroll-behavior:smooth;scroll-padding-top:var(--topbar-h)}
+body{
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block;background:#151515}
 a{color:inherit;text-decoration:none}
-.aviso{background:#c9a24a;color:#111;text-align:center;font-size:.85rem;padding:.5rem 1rem;font-weight:600}
-header{min-height:78vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:3rem 1.2rem;
-background:radial-gradient(circle at 30% 20%,#2a2a2e 0,#0f0f10 60%),repeating-linear-gradient(135deg,#151517 0 18px,#121214 18px 36px)}
-.poste{width:16px;height:90px;border-radius:8px;margin-bottom:1.4rem;background:repeating-linear-gradient(160deg,#c0392b 0 12px,#fff 12px 24px,#2c5aa0 24px 36px,#fff 36px 48px);box-shadow:0 0 18px #0008}
-h1{font-size:clamp(2rem,7vw,3.6rem);letter-spacing:.04em;text-transform:uppercase}
-h1 span{color:#c9a24a}
-.estrellas{margin:.8rem 0 1.6rem;color:#c9a24a;font-size:1.05rem}
-.estrellas small{color:#bbb}
-.btn{display:inline-block;background:#25d366;color:#08240f;font-weight:700;padding:.9rem 1.6rem;border-radius:40px;margin:.3rem}
-.btn.sec{background:transparent;border:2px solid #c9a24a;color:#c9a24a}
-section{max-width:1000px;margin:auto;padding:3.5rem 1.2rem}
-h2{font-size:1.7rem;margin-bottom:1.4rem;text-align:center}
-h2:after{content:"";display:block;width:60px;height:3px;background:#c9a24a;margin:.6rem auto 0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}
-.card{background:#18181b;border:1px solid #2a2a2e;border-radius:14px;padding:1.3rem;text-align:center}
-.card .ic{font-size:2rem}
-.card h3{margin:.5rem 0 .3rem}
-.card p{color:#aaa;font-size:.92rem}
-.card .p{color:#c9a24a;font-weight:600;margin-top:.6rem;font-size:.9rem}
-.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem}
-.gal div{aspect-ratio:1;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#888;font-size:.85rem;text-align:center;padding:1rem;
-background:linear-gradient(145deg,#1d1d21,#141416);border:1px dashed #3a3a40}
-.ubi{text-align:center}
-.ubi p{margin:.3rem 0;color:#ccc}
-footer{text-align:center;color:#777;font-size:.8rem;padding:2rem 1rem 6rem;border-top:1px solid #222}
-.flot{position:fixed;right:18px;bottom:18px;background:#25d366;color:#08240f;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 6px 18px #0009}
-#exp{display:none;position:fixed;inset:0;background:#0f0f10;z-index:99;align-items:center;justify-content:center;text-align:center;padding:2rem}
-#exp h2:after{display:none}
+button{font:inherit;background:none;border:0;color:inherit;cursor:pointer}
+.wrap{width:min(1120px,calc(100% - 2.2rem));margin-inline:auto}
+
+.topbar{position:fixed;top:0;left:0;right:0;z-index:80}
+.aviso{
+  background:linear-gradient(90deg,#d4b056,#c9a227 40%,#e8c96a 70%,#c9a227);
+  color:#1a1406;
+  text-align:center;
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.06em;
+  padding:.55rem 1rem;
+  text-transform:uppercase;
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.7rem 1.1rem;
+  background:rgba(7,7,7,.86);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+  position:relative;
+}
+.logo{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:1.35rem;
+  letter-spacing:.14em;
+  color:var(--gold2);
+  white-space:nowrap;
+}
+.logo small{display:block;font-family:Inter,sans-serif;font-size:.58rem;letter-spacing:.16em;color:var(--muted);font-weight:600;margin-top:-2px}
+.nav-links{display:flex;align-items:center;gap:.15rem}
+.nav-links a{
+  font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--muted);padding:.45rem .7rem;border-radius:999px;transition:.2s;
+}
+.nav-links a:hover{color:var(--gold2);background:var(--gold-dim)}
+.menu-btn{display:none;width:42px;height:42px;border-radius:10px;border:1px solid var(--line);align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.menu-btn span{display:block;width:18px;height:1.5px;background:var(--gold2);transition:.2s}
+
+.hero{
+  position:relative;
+  min-height:100svh;
+  min-height:100vh;
+  display:flex;
+  align-items:flex-end;
+  padding:calc(var(--topbar-h) + 1rem) 0 0;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.18) 32%,rgba(0,0,0,.55) 62%,rgba(7,7,7,.92) 86%,#070707 100%),
+    var(--hero) center 40%/cover no-repeat;
+}
+.hero-badge{
+  position:absolute;top:calc(var(--topbar-h) + 12px);right:16px;
+  font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;
+  color:rgba(244,239,230,.8);background:rgba(0,0,0,.45);
+  border:1px solid rgba(201,162,39,.35);padding:.28rem .55rem;border-radius:999px;
+  backdrop-filter:blur(8px);
+}
+.hero-inner{width:min(1120px,calc(100% - 2.2rem));margin:0 auto;padding:0 0 4.8rem}
+.eyebrow{
+  font-size:.78rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold2);
+  margin-bottom:.35rem;
+}
+h1{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:clamp(3.15rem,14vw,6.4rem);
+  line-height:.9;
+  letter-spacing:.03em;
+  font-weight:400;
+}
+.stars{margin:1rem 0 1.15rem;color:var(--gold2);font-weight:600;font-size:1.02rem;display:flex;flex-wrap:wrap;align-items:center;gap:.45rem .7rem}
+.stars .num{font-family:"Bebas Neue",sans-serif;font-size:1.55rem;letter-spacing:.04em;line-height:1}
+.stars small{color:var(--muted);font-weight:500;font-size:.92rem}
+.hero-meta{color:var(--muted);font-size:.95rem;margin-bottom:1.15rem;display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;align-items:center}
+.hero-meta span{display:inline-flex;align-items:center;gap:.4rem}
+.status{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-size:.75rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;
+  padding:.28rem .7rem;border-radius:999px;border:1px solid transparent;
+  white-space:nowrap;
+}
+.status.open{background:rgba(37,211,102,.12);color:#5eefa0;border-color:rgba(37,211,102,.3)}
+.status.closed{background:rgba(255,255,255,.06);color:#d0c8b8;border-color:rgba(255,255,255,.12)}
+.status i{width:7px;height:7px;border-radius:50%;background:currentColor;display:inline-block;flex-shrink:0}
+.cta-row{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  font-weight:700;border-radius:999px;padding:.95rem 1.45rem;font-size:.95rem;
+  transition:transform .15s,background .15s,box-shadow .15s;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-wa{background:var(--wa);color:#06240f;box-shadow:0 8px 24px rgba(37,211,102,.28)}
+.btn-wa:hover{background:#3be57a}
+.btn-ghost{background:transparent;color:var(--gold2);border:1px solid var(--gold)}
+.btn-ghost:hover{background:var(--gold-dim)}
+.btn-lg{padding:1.05rem 1.7rem;font-size:1.02rem}
+
+section{padding:4.4rem 0}
+.kicker{display:block;text-align:center;color:var(--gold);letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;font-weight:700;margin-bottom:.45rem}
+h2{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:clamp(2.1rem,5vw,3rem);
+  letter-spacing:.08em;
+  text-align:center;
+  font-weight:400;
+  margin-bottom:2.1rem;
+}
+h2:after{
+  content:"";
+  display:block;
+  width:52px;
+  height:2px;
+  background:var(--gold);
+  margin:.55rem auto 0;
+}
+
+.grid-serv{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card{
+  background:linear-gradient(180deg,#1a1a1a,#121212);
+  border:1px solid rgba(201,162,39,.18);
+  border-radius:var(--radius);
+  padding:1.4rem 1.2rem 1.25rem;
+  transition:border-color .2s,transform .2s,box-shadow .2s;
+}
+.card:hover{border-color:rgba(201,162,39,.55);transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.card .ic{
+  width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+  background:var(--gold-dim);border:1px solid var(--line);color:var(--gold2);margin-bottom:.9rem;
+}
+.card .ic svg{width:22px;height:22px}
+.card h3{font-family:"Bebas Neue",sans-serif;font-size:1.45rem;letter-spacing:.06em;font-weight:400;margin-bottom:.3rem}
+.card p{color:var(--muted);font-size:.9rem}
+.card .price{margin-top:.95rem;color:var(--gold2);font-weight:600;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase}
+
+.gal-note{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;text-align:center;margin:-1.2rem 0 1.5rem}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:.65rem}
+.gal-item{
+  position:relative;overflow:hidden;border-radius:14px;cursor:zoom-in;
+  background:#151515;aspect-ratio:4/3;
+  border:1px solid rgba(201,162,39,.12);
+}
+.gal-item:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;min-height:100%}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gal-item:hover img{transform:scale(1.06)}
+.gal-item:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.45));
+  opacity:0;transition:.3s;pointer-events:none;
+}
+.gal-item:hover:after{opacity:1}
+
+.trust{
+  background:
+    radial-gradient(800px 240px at 50% 0%,rgba(201,162,39,.12),transparent 70%),
+    var(--bg2);
+  border-block:1px solid var(--line);
+  text-align:center;
+  padding:4.2rem 0;
+}
+.trust .big{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:clamp(4.5rem,12vw,7rem);
+  line-height:.85;
+  color:var(--gold2);
+  letter-spacing:.04em;
+}
+.trust .star-row{color:var(--gold);font-size:1.5rem;letter-spacing:.15em;margin:.4rem 0 .7rem}
+.trust p{color:var(--muted);font-size:1.05rem;margin-bottom:1.4rem}
+.trust p strong{color:var(--text);font-weight:600}
+
+.split{display:grid;grid-template-columns:1fr 1.15fr;gap:1.4rem;align-items:stretch}
+.panel{
+  background:var(--card);
+  border:1px solid rgba(201,162,39,.18);
+  border-radius:var(--radius);
+  padding:1.5rem 1.3rem 1.3rem;
+}
+.panel.ubicacion{display:flex;flex-direction:column}
+.panel h3{font-family:"Bebas Neue",sans-serif;letter-spacing:.1em;font-size:1.55rem;margin-bottom:1rem}
+.hours{width:100%;border-collapse:collapse;font-size:.92rem}
+.hours th{text-align:left;font-weight:600;padding:.62rem .3rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.hours td{text-align:right;color:var(--muted);padding:.62rem .3rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:0}
+.hours tr.today{background:var(--gold-dim)}
+.hours tr.today th{color:var(--gold2);border-radius:8px 0 0 8px;padding-left:.7rem}
+.hours tr.today td{color:var(--text);font-weight:600;border-radius:0 8px 8px 0;padding-right:.7rem}
+.hours-status{margin-bottom:1rem}
+.map-wrap{border-radius:14px;overflow:hidden;border:1px solid rgba(201,162,39,.18);min-height:280px;background:#0c0c0c;flex:1}
+.map-wrap iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(.15) contrast(1.05)}
+.addr{color:var(--muted);margin:.15rem 0 1rem;font-size:.95rem}
+.addr strong{display:block;color:var(--text);font-weight:600;margin-bottom:.2rem}
+
+footer{
+  text-align:center;color:#7c766c;font-size:.8rem;
+  padding:2.4rem 1.2rem 6.5rem;
+  border-top:1px solid rgba(255,255,255,.06);
+  line-height:1.7;
+}
+footer a{color:var(--gold);font-weight:600}
+.flot{
+  position:fixed;right:16px;bottom:16px;z-index:70;
+  width:58px;height:58px;border-radius:50%;
+  background:var(--wa);color:#06240f;
+  display:grid;place-items:center;
+  box-shadow:0 8px 24px rgba(0,0,0,.4),0 0 0 0 rgba(37,211,102,.6);
+  animation:pulse 2.4s infinite;
+}
+.flot:hover{transform:scale(1.06)}
+.flot svg{width:28px;height:28px}
+@keyframes pulse{
+  0%{box-shadow:0 8px 24px rgba(0,0,0,.4),0 0 0 0 rgba(37,211,102,.55)}
+  70%{box-shadow:0 8px 24px rgba(0,0,0,.4),0 0 0 14px rgba(37,211,102,0)}
+  100%{box-shadow:0 8px 24px rgba(0,0,0,.4),0 0 0 0 rgba(37,211,102,0)}
+}
+
+#lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:120;align-items:center;justify-content:center;padding:2.2rem 3.2rem}
+#lb.open{display:flex}
+#lb img{max-width:min(1200px,92vw);max-height:86vh;border-radius:10px;box-shadow:0 20px 60px #000;object-fit:contain;background:transparent}
+#lb .x,#lb .prev,#lb .next{
+  position:absolute;color:#fff;width:44px;height:44px;border-radius:50%;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
+  display:grid;place-items:center;font-size:1.4rem;
+}
+#lb .x{top:16px;right:16px}
+#lb .prev{left:12px;top:50%;transform:translateY(-50%)}
+#lb .next{right:12px;top:50%;transform:translateY(-50%)}
+#lb .cap{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:#bbb;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+
+#exp{display:none;position:fixed;inset:0;background:#070707;z-index:200;align-items:center;justify-content:center;text-align:center;padding:2rem}
+#exp .box{max-width:420px}
+#exp h2{margin-bottom:.7rem}
+#exp p{color:var(--muted);margin-bottom:1.3rem}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .flot{animation:none}
+  html{scroll-behavior:auto}
+}
+
+@media (max-width:860px){
+  .menu-btn{display:flex}
+  .nav-links{
+    display:none;position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:0;
+    background:rgba(10,10,10,.97);border-bottom:1px solid var(--line);
+    padding:.5rem .7rem 1rem;z-index:81;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:.85rem .9rem;font-size:.9rem;border-radius:10px}
+  .grid-serv{grid-template-columns:1fr 1fr}
+  .gal{grid-template-columns:1fr 1fr}
+  .gal-item:first-child{grid-column:span 2;grid-row:span 1;aspect-ratio:16/10;min-height:0}
+  .gal-item:last-child{grid-column:span 2;aspect-ratio:16/10}
+  .split{grid-template-columns:1fr}
+}
+@media (max-width:420px){
+  .grid-serv{grid-template-columns:1fr}
+  h1{font-size:3.05rem}
+  .btn-lg{width:100%}
+  .aviso{font-size:.64rem;letter-spacing:.04em;padding:.5rem .7rem}
+  .hero-inner{padding-bottom:8.2rem}
+  section{padding:3.3rem 0}
+  .status{font-size:.68rem;letter-spacing:.02em;white-space:normal;text-align:left;line-height:1.35}
+}
 </style>
 </head>
 <body>
-<div id="exp"><div><h2>Esta vista previa ya expiró</h2><p style="color:#aaa;margin-top:.6rem">Si les interesa la página, escríbannos a Vitrina Barrio.</p><p style="margin-top:1.2rem"><a class="btn" href="https://wa.me/573027742140?text=Hola%2C%20vi%20la%20vista%20previa%20de%20la%20Barber%C3%ADa%20David%20Orozco">Escribir a Vitrina Barrio</a></p></div></div>
-
-<div class="aviso">MUESTRA · Vista previa hecha por Vitrina Barrio · disponible hasta el 13 de noviembre</div>
-
-<header>
-  <div class="poste"></div>
-  <h1>Barbería <span>David Orozco</span></h1>
-  <div class="estrellas">★★★★★ 5.0 <small>· más de 1.300 reseñas en Google</small></div>
-  <div>
-    <a class="btn" href="https://wa.me/573155620976?text=Hola%2C%20quiero%20pedir%20una%20cita">Pedir cita por WhatsApp</a>
-    <a class="btn sec" href="#ubicacion">Cómo llegar</a>
+<div id="exp">
+  <div class="box">
+    <p class="kicker">Vitrina Barrio</p>
+    <h2>Esta vista previa ya expiró</h2>
+    <p>Si les interesa la página, escríbannos a Vitrina Barrio y la armamos con la información real del negocio.</p>
+    <a class="btn btn-wa btn-lg" href="https://wa.me/573027742140?text=Hola%2C%20vi%20la%20vista%20previa%20de%20la%20Barber%C3%ADa%20Peluquer%C3%ADa%20David%20Orozco">Escribir a Vitrina Barrio</a>
   </div>
-</header>
+</div>
 
-<section>
-  <h2>Servicios</h2>
-  <div class="grid">
-    <div class="card"><div class="ic">✂️</div><h3>Corte de cabello</h3><p>Clásico, moderno o degradado, a tu estilo.</p><div class="p">Precio a consultar</div></div>
-    <div class="card"><div class="ic">🧔</div><h3>Barba</h3><p>Perfilado y arreglo de barba.</p><div class="p">Precio a consultar</div></div>
-    <div class="card"><div class="ic">💈</div><h3>Corte + barba</h3><p>El servicio completo en una sola cita.</p><div class="p">Precio a consultar</div></div>
-    <div class="card"><div class="ic">🪒</div><h3>Cejas y detalles</h3><p>Diseños y retoques finales.</p><div class="p">Precio a consultar</div></div>
+<div class="topbar" id="topbar">
+  <div class="aviso">MUESTRA · Vista previa hecha por Vitrina Barrio · disponible hasta el 13 de noviembre</div>
+  <header class="nav">
+    <a class="logo" href="#inicio">David Orozco<small>BARBERÍA PELUQUERÍA</small></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#resenas">Reseñas</a>
+      <a href="#horario">Horario</a>
+      <a href="#ubicacion">Ubicación</a>
+    </nav>
+  </header>
+</div>
+
+<section class="hero" id="inicio" data-src="img/hero.b64">
+  <div class="hero-badge">Foto de ejemplo</div>
+  <div class="hero-inner">
+    <p class="eyebrow">Cabecera · Bucaramanga</p>
+    <h1>David Orozco</h1>
+    <div class="stars">
+      <span aria-hidden="true">★★★★★</span>
+      <span class="num">5.0</span>
+      <small>· 1.462 reseñas en Google</small>
+    </div>
+    <div class="hero-meta">
+      <span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+        Cl. 41 #29-17, Cabecera
+      </span>
+      <span class="status closed" id="heroStatus"><i></i><span>Cerrado</span></span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-wa btn-lg" href="https://wa.me/573155620976?text=Hola%2C%20quiero%20pedir%20una%20cita">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 3.9A10 10 0 0 0 2.2 16.4L1 22l5.7-1.2A10 10 0 0 0 20 3.9zm-8 16.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.4.7.7-3.3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.4.2-.3a1 1 0 0 0 0-.5c0-.1-.5-1.3-.7-1.8s-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.6 11.5 11.5 0 0 0 4.4 3.9c.6.2 1 .4 1.4.5a3.4 3.4 0 0 0 1.5.1 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c-.1-.1-.2-.1-.4-.2z"/></svg>
+        Pide tu cita por WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="#ubicacion">Cómo llegar</a>
+    </div>
   </div>
 </section>
 
-<section>
-  <h2>Nuestros trabajos</h2>
-  <div class="gal">
-    <div>Aquí van las fotos de sus cortes</div><div>Foto de degradado</div><div>Foto de barba</div><div>Foto del local</div>
+<section id="servicios">
+  <div class="wrap">
+    <span class="kicker">Lo que hacemos</span>
+    <h2>Servicios</h2>
+    <div class="grid-serv reveal">
+      <article class="card">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="6" cy="6" r="2.2"/><circle cx="18" cy="18" r="2.2"/><path d="M8 8l8 8M14.5 6.5l3-3M6.5 14.5l-3 3"/></svg></div>
+        <h3>Corte de cabello</h3>
+        <p>Corte clásico o moderno, ajustado a tu estilo y al tipo de cabello.</p>
+        <div class="price">Consultar precio</div>
+      </article>
+      <article class="card">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20c2.2-7 4.5-12.2 7-14.4C14.5 7.8 16.8 13 19 20"/><path d="M8 20c1.4-4.2 2.8-7 4-8.4 1.2 1.4 2.6 4.2 4 8.4"/><path d="M12 4.2v2.2"/></svg></div>
+        <h3>Degradado / Fade</h3>
+        <p>Degradados limpios, desde un fade bajo hasta uno alto, con líneas precisas.</p>
+        <div class="price">Consultar precio</div>
+      </article>
+      <article class="card">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8.2c.5-1.8 1.8-2.7 4-2.7s3.5.9 4 2.7"/><path d="M7.4 9c.3 5.4 2.3 8.6 4.6 8.6S16.3 14.4 16.6 9"/><path d="M9 11.6c.7 1.7 1.8 2.7 3 2.7s2.3-1 3-2.7"/></svg></div>
+        <h3>Barba</h3>
+        <p>Perfilado y arreglo de barba con navaja o máquina, para un acabado limpio.</p>
+        <div class="price">Consultar precio</div>
+      </article>
+      <article class="card">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="4.2" r="1.5"/><rect x="9.2" y="6.2" width="5.6" height="13.6" rx="2.8"/><path d="M9.2 10l5.6-2.2M9.2 14l5.6-2.2M9.2 18l5.6-2.2"/></svg></div>
+        <h3>Corte + barba</h3>
+        <p>El servicio completo en una sola cita: cabello y barba bien perfilados.</p>
+        <div class="price">Consultar precio</div>
+      </article>
+      <article class="card">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.8 12c2.4-3 4.7-3.8 7-1.4"/><path d="M13.2 10.6c2.3-2.4 4.6-1.6 7 1.4"/><path d="M12 14.2l.55 1.2 1.3.2-1 .95.25 1.3-1.1-.7-1.1.7.25-1.3-1-.95 1.3-.2z"/></svg></div>
+        <h3>Cejas y diseños</h3>
+        <p>Diseño de cejas y detalles o dibujos en el cabello, con trazo preciso.</p>
+        <div class="price">Consultar precio</div>
+      </article>
+      <article class="card">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="8" r="3"/><path d="M6 19c.8-3 3-4.5 6-4.5S17.2 16 18 19"/><path d="M16.2 4.6c1.1.3 2.1 1.1 2.7 2.1"/></svg></div>
+        <h3>Corte para niños</h3>
+        <p>Cortes cómodos y cuidadosos para los más pequeños de la casa.</p>
+        <div class="price">Consultar precio</div>
+      </article>
+    </div>
   </div>
 </section>
 
-<section id="ubicacion" class="ubi">
-  <h2>Ubicación</h2>
-  <p>📍 Cl. 41 #29-17, Bucaramanga</p>
-  <p style="margin-top:1rem"><a class="btn sec" href="https://www.google.com/maps/search/?api=1&query=Barber%C3%ADa%20David%20Orozco%20Cl.%2041%20%2329-17%20Bucaramanga" target="_blank" rel="noopener">Ver en Google Maps</a></p>
+<section id="galeria" style="padding-top:1.5rem">
+  <div class="wrap">
+    <span class="kicker">Nuestros trabajos</span>
+    <h2>Galería</h2>
+    <p class="gal-note">Fotos de ejemplo</p>
+    <div class="gal reveal" id="galeriaGrid">
+      <a class="gal-item" href="#" data-src="img/acabado.b64"><img alt="Corte moderno con degradado, foto de ejemplo" data-src="img/acabado.b64"></a>
+      <a class="gal-item" href="#" data-src="img/fade.b64"><img alt="Degradado o fade visto desde atrás, foto de ejemplo" data-src="img/fade.b64"></a>
+      <a class="gal-item" href="#" data-src="img/diseno.b64"><img alt="Diseño geométrico en el cabello, foto de ejemplo" data-src="img/diseno.b64"></a>
+      <a class="gal-item" href="#" data-src="img/barba.b64"><img alt="Perfilado de barba con navaja, foto de ejemplo" data-src="img/barba.b64"></a>
+      <a class="gal-item" href="#" data-src="img/clippers.b64"><img alt="Corte con máquina, foto de ejemplo" data-src="img/clippers.b64"></a>
+      <a class="gal-item" href="#" data-src="img/sillas.b64"><img alt="Sillones de barbería, foto de ejemplo" data-src="img/sillas.b64"></a>
+      <a class="gal-item" href="#" data-src="img/herramientas.b64"><img alt="Herramientas de barbería, foto de ejemplo" data-src="img/herramientas.b64"></a>
+      <a class="gal-item" href="#" data-src="img/interior.b64"><img alt="Interior de una barbería moderna, foto de ejemplo" data-src="img/interior.b64"></a>
+    </div>
+  </div>
 </section>
 
-<footer>Vista previa de ejemplo hecha por <a href="https://maiguxd.github.io/" style="color:#c9a24a">Vitrina Barrio</a>. Los servicios, precios y fotos se ajustan con la información real de la barbería.</footer>
-<a class="flot" href="https://wa.me/573155620976?text=Hola%2C%20quiero%20pedir%20una%20cita" aria-label="WhatsApp">💬</a>
+<section class="trust" id="resenas">
+  <div class="wrap reveal">
+    <span class="kicker">Google</span>
+    <div class="big">5.0</div>
+    <div class="star-row" aria-label="5.0 estrellas">★★★★★</div>
+    <p><strong>Más de 1.400 reseñas</strong> en Google</p>
+    <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Barber%C3%ADa%20Peluquer%C3%ADa%20David%20Orozco%20Bucaramanga" target="_blank" rel="noopener">Ver reseñas en Google</a>
+  </div>
+</section>
+
+<section id="horario">
+  <div class="wrap">
+    <span class="kicker">Visítanos</span>
+    <h2>Horario y ubicación</h2>
+    <div class="split reveal">
+      <div class="panel" id="panelHorario">
+        <h3>Horario</h3>
+        <div class="hours-status"><span class="status closed" id="hoursStatus"><i></i><span>Cerrado</span></span></div>
+        <table class="hours">
+          <tbody>
+            <tr data-day="1"><th>Lunes</th><td>7:00 a. m. – 6:00 p. m.</td></tr>
+            <tr data-day="2"><th>Martes</th><td>7:00 a. m. – 6:00 p. m.</td></tr>
+            <tr data-day="3"><th>Miércoles</th><td>7:00 a. m. – 6:00 p. m.</td></tr>
+            <tr data-day="4"><th>Jueves</th><td>7:00 a. m. – 6:00 p. m.</td></tr>
+            <tr data-day="5"><th>Viernes</th><td>7:00 a. m. – 6:00 p. m.</td></tr>
+            <tr data-day="6"><th>Sábado</th><td>8:00 a. m. – 8:00 p. m.</td></tr>
+            <tr data-day="0"><th>Domingo</th><td>Cerrado</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="panel ubicacion" id="ubicacion">
+        <h3>Ubicación</h3>
+        <p class="addr"><strong>Barbería Peluquería David Orozco</strong>Cl. 41 #29-17, Cabecera, Bucaramanga</p>
+        <div class="map-wrap">
+          <iframe title="Mapa de Barbería Peluquería David Orozco en Bucaramanga" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Cl.%2041%20%2329-17%2C%20Cabecera%2C%20Bucaramanga&hl=es&z=16&output=embed"></iframe>
+        </div>
+        <p style="margin-top:1rem">
+          <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Cl.%2041%20%2329-17%2C%20Cabecera%2C%20Bucaramanga" target="_blank" rel="noopener">Cómo llegar</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Vista previa de muestra hecha por <a href="https://maiguxd.github.io/">Vitrina Barrio</a>.<br>
+  Los servicios y las fotos se ajustan con la información real del negocio.
+</footer>
+
+<a class="flot" href="https://wa.me/573155620976?text=Hola%2C%20quiero%20pedir%20una%20cita" aria-label="Pide tu cita por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.9A10 10 0 0 0 2.2 16.4L1 22l5.7-1.2A10 10 0 0 0 20 3.9zm-8 16.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.4.7.7-3.3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.4-.4.2-.3a1 1 0 0 0 0-.5c0-.1-.5-1.3-.7-1.8s-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.6 11.5 11.5 0 0 0 4.4 3.9c.6.2 1 .4 1.4.5a3.4 3.4 0 0 0 1.5.1 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c-.1-.1-.2-.1-.4-.2z"/></svg>
+</a>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Foto de la galería">
+  <button class="x" id="lbX" aria-label="Cerrar">×</button>
+  <button class="prev" id="lbPrev" aria-label="Anterior">‹</button>
+  <img id="lbImg" alt="Foto de ejemplo de la galería">
+  <button class="next" id="lbNext" aria-label="Siguiente">›</button>
+  <div class="cap">Foto de ejemplo</div>
+</div>
 
 <script>
-// Expira el viernes 13 de noviembre de 2026 a las 6:30 p. m. (hora de Colombia)
-if (Date.now() > new Date("2026-11-13T18:30:00-05:00").getTime()) {
-  document.getElementById("exp").style.display = "flex";
-  document.body.style.overflow = "hidden";
-}
+(function(){
+  // Expira el viernes 13 de noviembre de 2026 a las 6:30 p. m. (hora de Colombia)
+  if (Date.now() > new Date("2026-11-13T18:30:00-05:00").getTime()) {
+    document.getElementById("exp").style.display = "flex";
+    document.body.style.overflow = "hidden";
+  }
+
+  function loadB64(path){
+    return fetch(path).then(function(r){
+      if (!r.ok) throw new Error("No se pudo cargar " + path);
+      return r.text();
+    }).then(function(t){
+      return "data:image/webp;base64," + t.replace(/\s+/g, "");
+    });
+  }
+
+  var hero = document.querySelector(".hero");
+  if (hero && hero.getAttribute("data-src")) {
+    loadB64(hero.getAttribute("data-src")).then(function(u){
+      hero.style.setProperty("--hero", 'url("' + u + '")');
+    }).catch(function(){});
+  }
+  document.querySelectorAll(".gal-item").forEach(function(a){
+    var path = a.getAttribute("data-src");
+    if (!path) return;
+    loadB64(path).then(function(u){
+      a.setAttribute("href", u);
+      var img = a.querySelector("img");
+      if (img) img.src = u;
+    }).catch(function(){});
+  });
+
+  function setTop(){
+    var t = document.getElementById("topbar");
+    if (t) document.documentElement.style.setProperty("--topbar-h", t.offsetHeight + "px");
+  }
+  setTop();
+  window.addEventListener("resize", setTop);
+
+  var menuBtn = document.getElementById("menuBtn");
+  var navLinks = document.getElementById("navLinks");
+  menuBtn.addEventListener("click", function(){
+    var open = navLinks.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  navLinks.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){ navLinks.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); });
+  });
+
+  function bogotaNow(){
+    var parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/Bogota",
+      weekday: "short",
+      hour: "2-digit",
+      minute: "2-digit",
+      hourCycle: "h23"
+    }).formatToParts(new Date());
+    var get = function(t){ return parts.find(function(p){ return p.type === t; }).value; };
+    var map = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    return { dow: map[get("weekday")], minutes: parseInt(get("hour"),10)*60 + parseInt(get("minute"),10) };
+  }
+  var hours = {0:null,1:[7*60,18*60],2:[7*60,18*60],3:[7*60,18*60],4:[7*60,18*60],5:[7*60,18*60],6:[8*60,20*60]};
+  var dayNames = ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
+  function fmtHour(m){
+    var h = Math.floor(m/60), min = m%60;
+    var ap = h >= 12 ? "p.m." : "a.m.";
+    var h12 = h % 12; if (h12 === 0) h12 = 12;
+    return h12 + ":" + String(min).padStart(2,"0") + " " + ap;
+  }
+  function nextOpenText(dow, minutes){
+    for (var i=0;i<8;i++){
+      var d = (dow + i) % 7;
+      var slot = hours[d];
+      if (!slot) continue;
+      if (i === 0 && minutes < slot[0]) return "Abre hoy a las " + fmtHour(slot[0]);
+      if (i > 0) {
+        var when = i === 1 ? "mañana" : "el " + dayNames[d];
+        return "Abre " + when + " a las " + fmtHour(slot[0]);
+      }
+    }
+    return "";
+  }
+  var now = bogotaNow();
+  var slot = hours[now.dow];
+  var open = slot && now.minutes >= slot[0] && now.minutes < slot[1];
+  var label = open ? "Abierto ahora" : "Cerrado";
+  if (!open) {
+    var nxt = nextOpenText(now.dow, now.minutes);
+    if (nxt) label = "Cerrado · " + nxt;
+  }
+  function setStatus(el){
+    if (!el) return;
+    el.classList.toggle("open", open);
+    el.classList.toggle("closed", !open);
+    var span = el.querySelector("span");
+    if (span) span.textContent = label;
+  }
+  setStatus(document.getElementById("heroStatus"));
+  setStatus(document.getElementById("hoursStatus"));
+  document.querySelectorAll(".hours tr[data-day]").forEach(function(tr){
+    if (tr.getAttribute("data-day") === String(now.dow)) tr.classList.add("today");
+  });
+
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) e.target.classList.add("in"); });
+    }, {threshold: 0.12, rootMargin: "0px 0px -8% 0px"});
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
+  }
+
+  var items = Array.prototype.slice.call(document.querySelectorAll(".gal-item"));
+  var lb = document.getElementById("lb");
+  var lbImg = document.getElementById("lbImg");
+  var idx = 0;
+  function show(i){
+    idx = (i + items.length) % items.length;
+    var href = items[idx].getAttribute("href");
+    if (href && href !== "#") lbImg.src = href;
+    lb.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function hide(){
+    lb.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+  items.forEach(function(a,i){
+    a.addEventListener("click", function(ev){ ev.preventDefault(); show(i); });
+  });
+  document.getElementById("lbX").addEventListener("click", hide);
+  document.getElementById("lbPrev").addEventListener("click", function(){ show(idx-1); });
+  document.getElementById("lbNext").addEventListener("click", function(){ show(idx+1); });
+  lb.addEventListener("click", function(ev){ if (ev.target === lb) hide(); });
+  document.addEventListener("keydown", function(ev){
+    if (!lb.classList.contains("open")) return;
+    if (ev.key === "Escape") hide();
+    if (ev.key === "ArrowLeft") show(idx-1);
+    if (ev.key === "ArrowRight") show(idx+1);
+  });
+})();
 </script>
 </body>
 </html>
