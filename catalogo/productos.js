@@ -12,10 +12,17 @@
         formateados solos (ejemplo: $12.000).
 
    El vidrio templado puede cambiar de precio: edita el bloque
-   marcado como "PRECIOS DEL VIDRIO" más abajo (tres números).
+   marcado como "PRECIOS DEL VIDRIO" más abajo.
 
-   No agregues aquí otros valores. La página solo usa el precio para
-   la tienda y el precio sugerido al público.
+   Al entrar, la página muestra una intro para elegir vista:
+     - #mayor  → al por mayor (precios para tiendas, combos y pedido)
+     - #detal  → venta por unidad (solo precio al detal, sin combos)
+   Los textos de esa intro están en CATALOGO.textos, más abajo.
+
+   En la página se muestran dos tipos de precio:
+     - precioTienda: precio para tiendas (al por mayor)
+     - precioPublico: precio al detal, por unidad
+   Los combos no tienen precio al detal: se venden solo a tiendas.
    ============================================================================= */
 
 const CATALOGO = {
@@ -28,6 +35,19 @@ const CATALOGO = {
   actualizado: "2026-11-24",
   garantia: "3 meses",
   envio: "En 2 a 4 días hábiles. El envío es gratis desde $250.000 si se paga en línea.",
+
+  /* Textos de la pantalla de entrada y de las dos vistas. Edítalos aquí. */
+  textos: {
+    introEyebrow: "Catálogo Vitrina Barrio",
+    introTitulo: "Accesorios para celular en Bucaramanga",
+    introTexto: "Somos Vitrina Barrio. Este es nuestro catálogo de accesorios para celular en Bucaramanga (Colorados / Campestre) y alrededores, para tiendas de barrio, misceláneas, papelerías y locales de accesorios, y también para venta por unidad. Los productos Yookie son de la marca oficial distribuida en Colombia. Garantía de 3 meses.",
+    introElegir: "Elige cómo quieres ver el catálogo",
+    introMayorTitulo: "Al por mayor",
+    introMayorSub: "Para tiendas: precios de mayorista, combos y pedido por correo.",
+    introDetalTitulo: "Venta por unidad",
+    introDetalSub: "Precio al detal, por unidad. Pedido por correo.",
+    introVolver: "Elegir otra vez"
+  },
 
   productos: [
     {
@@ -45,9 +65,9 @@ const CATALOGO = {
       unidadVenta: "unidad",
       imagen: "assets/img/cable-cb90.jpg",
       alt: "Caja del cable de carga rápida Yookie CB90, vista frontal y posterior",
-      // Precio para la tienda (al por mayor), en COP
+      // Precio para tiendas (al por mayor), en COP
       precioTienda: 12000,
-      // Precio sugerido al público, en COP
+      // Precio al detal (por unidad), en COP. Tienda oficial YOOKIE.
       precioPublico: 15900
     },
     {
@@ -66,9 +86,9 @@ const CATALOGO = {
       unidadVenta: "unidad",
       imagen: "assets/img/cubo-kl02.jpg",
       alt: "Cubo de carga rápida Yookie KL02 de 20 W, visto por ambos lados",
-      // Precio para la tienda (al por mayor), en COP
+      // Precio para tiendas (al por mayor), en COP
       precioTienda: 18000,
-      // Precio sugerido al público, en COP
+      // Precio al detal (por unidad), en COP. Tienda oficial YOOKIE.
       precioPublico: 21900
     },
     {
@@ -87,14 +107,15 @@ const CATALOGO = {
       unidadVenta: "unidad",
       imagen: "assets/img/powerbank-eo103.jpg",
       alt: "Caja del power bank Yookie EO103 de 10.000 mAh, vista frontal y posterior",
-      // Precio para la tienda (al por mayor), en COP
+      // Precio para tiendas (al por mayor), en COP
       precioTienda: 52000,
-      // Precio sugerido al público, en COP
+      // Precio al detal (por unidad), en COP. Tienda oficial YOOKIE.
       precioPublico: 68000
     },
     {
       id: "vidrio-templado",
       nombre: "Vidrio templado Premium (paquete de 10)",
+      nombreDetal: "Vidrio templado Premium",
       marca: "",
       descripcion: "Paquete de 10 vidrios templados de la misma referencia, para proteger la pantalla. Hay que pedir el modelo de celular que más se venda en la tienda.",
       caracteristicas: [
@@ -109,17 +130,21 @@ const CATALOGO = {
       alt: "Foto de ejemplo de un vidrio templado Premium. El pedido se arma por modelo de celular.",
       fotoNota: "Foto de ejemplo. El pedido se arma por el modelo de celular que más rote en la tienda.",
       pideReferencia: true,
-      notaPublico: "Por unidad al público. El paquete no se vende al detal como combo cerrado.",
+      // No es un precio oficial: es una referencia de mercado, aproximada.
+      notaPublico: "Referencia de mercado, aprox. El paquete se vende a la tienda, no como combo cerrado al detal.",
+      precioPublicoDesde: true,
+      precioPublicoAprox: true,
 
       /* -----------------------------------------------------------------
          PRECIOS DEL VIDRIO — pueden cambiar.
-         Edita estos tres números (enteros, COP, sin puntos ni $).
+         Edita estos números (enteros, COP, sin puntos ni $).
          Si cambias el precio del paquete, actualiza también el unitario
          (el paquete son 10 unidades).
+         precioPublico se muestra como "desde $…" y "aprox."
          ----------------------------------------------------------------- */
-      precioTienda: 60000,           // Precio para la tienda, del paquete de 10
-      precioTiendaUnitario: 6000,    // Precio para la tienda, por cada vidrio
-      precioPublico: 15000           // Precio sugerido al público, por unidad
+      precioTienda: 60000,           // Precio para tiendas, del paquete de 10
+      precioTiendaUnitario: 6000,    // Precio para tiendas, por cada vidrio
+      precioPublico: 15000           // Precio al detal por unidad (referencia, desde / aprox.)
     },
     {
       id: "audifonos-es45",
@@ -136,9 +161,9 @@ const CATALOGO = {
       unidadVenta: "unidad",
       imagen: "assets/img/audifonos-es45.jpg",
       alt: "Caja de los audífonos inalámbricos Yookie ES45, vista frontal y posterior",
-      // Precio para la tienda (al por mayor), en COP
+      // Precio para tiendas (al por mayor), en COP
       precioTienda: 36000,
-      // Precio sugerido al público, en COP
+      // Precio al detal (por unidad), en COP. Tienda oficial YOOKIE.
       precioPublico: 49900
     }
   ],
@@ -156,12 +181,12 @@ const CATALOGO = {
         { id: "cubo-kl02", cantidad: 1 },
         { id: "cable-cb90", cantidad: 1 }
       ],
-      // Precio para la tienda (al por mayor), en COP
+      // Precio para tiendas (al por mayor), en COP
       precioTienda: 28000,
       // Lo que saldría si se compran sueltos, en COP (para mostrar el ahorro)
       precioSiSuelto: 30000,
-      // Precio sugerido al público por el set, en COP
-      precioPublicoConjunto: 35000
+      // Los combos se venden solo a tiendas; no tienen precio al detal
+      precioPublicoConjunto: null
     },
     {
       id: "combo-vitrina-carga",
@@ -175,11 +200,11 @@ const CATALOGO = {
         { id: "cable-cb90", cantidad: 5 },
         { id: "cubo-kl02", cantidad: 2 }
       ],
-      // Precio para la tienda (al por mayor), en COP
+      // Precio para tiendas (al por mayor), en COP
       precioTienda: 90000,
       // Lo que saldría si se compran sueltos, en COP (para mostrar el ahorro)
       precioSiSuelto: 96000,
-      // No hay precio sugerido de set en el catálogo
+      // Los combos se venden solo a tiendas; no tienen precio al detal
       precioPublicoConjunto: null
     },
     {
@@ -198,11 +223,11 @@ const CATALOGO = {
       ],
       pideReferencia: true,
       nota: "Confirmar con la tienda la referencia de los vidrios antes de armar el combo.",
-      // Precio para la tienda (al por mayor), en COP
+      // Precio para tiendas (al por mayor), en COP
       precioTienda: 145000,
       // Lo que saldría si se compran sueltos, en COP (para mostrar el ahorro)
       precioSiSuelto: 156000,
-      // No hay precio sugerido de set en el catálogo
+      // Los combos se venden solo a tiendas; no tienen precio al detal
       precioPublicoConjunto: null
     }
   ]
