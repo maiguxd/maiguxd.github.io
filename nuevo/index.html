@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vitrina Barrio | Páginas web para negocios de barrio en Bucaramanga</title>
+<meta name="description" content="Hacemos la página web de tu negocio de barrio: tus fotos, tus servicios, tu ubicación y un botón directo a WhatsApp. Pago único desde $110.000. Muestra gratis antes de pagar.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#5B3A21">
+<link rel="icon" href="/img/logo.jpg" type="image/jpeg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Vitrina Barrio">
+<meta property="og:title" content="Vitrina Barrio · La página web de tu negocio de barrio">
+<meta property="og:description" content="Tus fotos, tus servicios, tu ubicación y un botón directo a WhatsApp. Pago único desde $110.000. Te hacemos una muestra gratis.">
+<meta property="og:url" content="https://maiguxd.github.io/">
+<meta property="og:image" content="https://maiguxd.github.io/img/barberia.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1000">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Vitrina Barrio",
+  "description": "Páginas web para negocios de barrio, con botón directo a WhatsApp.",
+  "url": "https://maiguxd.github.io/",
+  "logo": "https://maiguxd.github.io/img/logo.jpg",
+  "image": "https://maiguxd.github.io/img/barberia.jpg",
+  "telephone": "+57 302 774 2140",
+  "email": "vitrinabarrio@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Bucaramanga", "addressRegion": "Santander", "addressCountry": "CO" },
+  "areaServed": "Colombia",
+  "sameAs": ["https://www.instagram.com/vitrinabarrio/"],
+  "priceRange": "$110.000 - $175.000 COP"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Lexend:wght@400;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cork:#B98A5C;
+  --cork-d:#8E6038;
+  --cork-l:#D3A878;
+  --wood:#5B3A21;
+  --wood-d:#3F2715;
+  --paper:#FBF8F0;
+  --paper-2:#F3EEE1;
+  --ink:#1B1B1B;
+  --ink-2:#4A4740;
+  --marker:#C8102E;
+  --hi:#FFE14A;
+  --wa:#157F3F;      /* reservado: solo WhatsApp */
+  --wa-ink:#0E6B33;  /* reservado: solo WhatsApp */
+  --pin:#D7262E;
+  --display:"Archivo", "Arial Narrow", sans-serif;
+  --body:"Lexend", system-ui, sans-serif;
+  --hand:"Permanent Marker", "Comic Sans MS", cursive;
+  --pad:clamp(16px, 4vw, 40px);
+  --frame:56px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--frame) + 12px);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;font-family:var(--body);font-size:18px;line-height:1.55;color:var(--ink);
+  overflow-x:clip;
+  /* Corcho: granos claros y oscuros de distintos tamaños sobre el tono base */
+  background-color:var(--cork);
+  background-image:
+    radial-gradient(circle at 30% 40%, var(--cork-d) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 70% 60%, var(--cork-l) 0 1.2px, transparent 1.8px),
+    radial-gradient(circle at 50% 50%, rgba(80,45,20,.35) 0 1.6px, transparent 2.4px),
+    radial-gradient(circle at 20% 80%, rgba(255,230,190,.35) 0 .9px, transparent 1.4px);
+  background-size:7px 9px, 11px 13px, 23px 19px, 5px 6px;
+}
+::selection{background:var(--hi);color:var(--ink)}
+img{max-width:100%;display:block}
+figure{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--paper);padding:10px 14px;z-index:100;font-weight:700}
+.skip:focus{left:8px}
+
+/* ——— Papel, tachuelas y cinta ——— */
+.paper{
+  background:var(--paper);position:relative;
+  box-shadow:0 1px 1px rgba(40,20,5,.25), 0 6px 14px -4px rgba(40,20,5,.35);
+}
+.lift{transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s cubic-bezier(.2,.8,.2,1)}
+.pin{
+  position:absolute;width:18px;height:18px;border-radius:50%;z-index:3;
+  background:radial-gradient(circle at 35% 32%, #ff8a8a 0 2px, var(--pin) 3.5px 6px, #8f1016 9px);
+  box-shadow:2px 4px 4px rgba(30,10,0,.45);
+}
+.pin.y{background:radial-gradient(circle at 35% 32%, #fff4b0 0 2px, #E9B21A 3.5px 6px, #8a6200 9px)}
+.pin.g{background:radial-gradient(circle at 35% 32%, #d5f2ff 0 2px, #2C7FB8 3.5px 6px, #11405f 9px)}
+.tape{
+  position:absolute;height:28px;width:96px;z-index:3;
+  background:rgba(250,243,214,.72);
+  box-shadow:0 1px 2px rgba(40,20,5,.2);
+  clip-path:polygon(3% 0,100% 6%,97% 100%,0 92%);
+}
+.hand{font-family:var(--hand);font-weight:400;color:var(--marker);line-height:1.15}
+
+/* ——— Marco de madera (navegación) ——— */
+.frame{
+  position:sticky;top:0;z-index:40;height:var(--frame);
+  display:flex;align-items:center;gap:16px;padding:0 var(--pad);
+  background:linear-gradient(180deg, #6A4428, var(--wood) 55%, var(--wood-d));
+  border-bottom:3px solid #2E1B0E;
+  color:#F6E9D2;
+}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-stretch:85%;font-weight:800;font-size:1.15rem;letter-spacing:.01em;white-space:nowrap}
+.brand img{width:36px;height:36px;border-radius:7px}
+.frame nav{display:flex;gap:4px;margin-left:auto}
+.frame nav a{text-decoration:none;font-weight:700;font-size:.95rem;padding:8px 12px;border-radius:6px;white-space:nowrap}
+.frame nav a:hover{background:rgba(255,240,210,.12)}
+.frame .write{margin-left:8px}
+.idx{display:none;margin-left:auto;position:relative}
+.idx summary{list-style:none;cursor:pointer;font-weight:700;padding:8px 12px;border:2px solid rgba(246,233,210,.5);border-radius:6px;font-size:.95rem}
+.idx summary::-webkit-details-marker{display:none}
+.idx[open] summary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.idx ul{
+  position:absolute;right:0;top:calc(100% + 10px);margin:0;padding:10px 0;list-style:none;min-width:220px;
+  background:var(--paper);color:var(--ink);transform:rotate(1deg);
+  box-shadow:0 10px 24px -6px rgba(30,15,5,.55);
+}
+.idx li a{display:block;padding:12px 20px;font-weight:700;text-decoration:none;font-size:1.05rem}
+.idx li a:hover{background:var(--hi)}
+
+/* Botón de WhatsApp (verde reservado) */
+.wa-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--wa);color:#fff;text-decoration:none;font-weight:700;
+  padding:12px 20px;border-radius:8px;min-height:48px;
+  box-shadow:0 4px 10px -4px rgba(0,0,0,.45);
+  transition:transform .2s, box-shadow .2s;
+}
+.wa-btn:hover{transform:translateY(-2px);box-shadow:0 10px 18px -6px rgba(0,0,0,.45)}
+.wa-btn:active{transform:translateY(1px);box-shadow:0 2px 4px -2px rgba(0,0,0,.45)}
+.wa-btn svg{width:22px;height:22px;flex:none}
+.frame .wa-btn{min-height:40px;padding:8px 14px;font-size:.95rem}
+
+/* ——— Escena principal ——— */
+.board{max-width:1280px;margin:0 auto;padding:clamp(24px,5vw,56px) var(--pad) clamp(40px,6vw,72px)}
+.hero{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:clamp(24px,4vw,56px);align-items:start}
+/* El volante: la hoja impresa y, colgando debajo, las tiritas recortadas */
+.flyer{transform:rotate(-1.2deg)}
+.sheet{padding:clamp(24px,3vw,38px) clamp(22px,4vw,48px) 6px}
+.sheet > .pin{top:12px;left:50%;margin-left:-9px}
+/* Sello de caucho en la esquina de la hoja */
+.rubber{
+  position:absolute;top:18px;right:clamp(16px,3vw,32px);z-index:2;
+  display:flex;align-items:center;gap:8px;padding:6px 10px 6px 6px;
+  border:2.5px solid #2B4C8C;border-radius:8px;color:#2B4C8C;
+  transform:rotate(-6deg);opacity:.92;
+}
+.rubber img{width:40px;height:40px;border-radius:5px}
+.rubber span{font-family:var(--display);font-stretch:75%;font-weight:900;font-size:.86rem;line-height:1.05;letter-spacing:.06em;text-transform:uppercase}
+h1{
+  font-family:var(--display);font-stretch:68%;font-weight:900;text-transform:uppercase;
+  font-size:clamp(2.6rem, 6.4vw, 5.2rem);line-height:.9;letter-spacing:-.005em;margin:0 0 14px;
+  text-wrap:balance;
+}
+h1 mark{background:linear-gradient(transparent 58%, var(--hi) 58% 92%, transparent 92%);color:inherit;padding:0 .04em}
+.lead{font-size:clamp(1.05rem,1.5vw,1.22rem);margin:0 0 16px;max-width:44ch}
+.price{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;margin:0 0 6px}
+.price .amt{position:relative;font-family:var(--display);font-stretch:80%;font-weight:900;font-size:clamp(2.3rem,5vw,3.3rem);line-height:1;padding:6px 16px 6px 28px}
+.price .amt small{font-size:.38em;font-weight:800;margin-left:4px;letter-spacing:.04em}
+.price .amt svg{position:absolute;inset:-6px -14px -8px -10px;width:calc(100% + 24px);height:calc(100% + 14px);overflow:visible;pointer-events:none}
+.price .note{font-size:clamp(1rem,1.6vw,1.2rem);max-width:26ch;transform:rotate(-3deg);margin:0}
+.later{margin:0;color:var(--ink-2);font-size:.98rem}
+.free{margin:10px 0 0;font-weight:700;font-size:1.05rem}
+.free b{background:var(--hi);padding:0 4px}
+
+/* Tiritas para arrancar */
+.tear-hint{display:flex;align-items:flex-end;gap:10px;margin:14px 0 4px;font-size:1.12rem}
+.tear-hint svg{width:42px;height:34px;flex:none;color:var(--marker)}
+.tabs{display:flex}
+.tab{
+  flex:1 1 0;min-width:0;height:132px;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:6px;padding-top:10px;
+  background:#E6F3EA;text-decoration:none;color:var(--wa-ink);
+  border-top:2px dashed #7f9a88;border-right:1.5px dashed #8fae99;
+  box-shadow:0 6px 8px -6px rgba(40,20,5,.45);
+  transform-origin:50% 0;
+  transition:transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s;
+}
+.tab:last-child{border-right:0}
+.tab svg{width:20px;height:20px;flex:none;color:var(--wa)}
+.tab span{
+  writing-mode:vertical-rl;transform:rotate(180deg);
+  font-family:var(--display);font-stretch:70%;font-weight:800;font-size:.98rem;line-height:1.1;letter-spacing:.02em;white-space:nowrap;text-align:center;
+}
+.tab span b{font-weight:900;color:var(--ink)}
+.tab:hover,.tab:focus-visible{transform:rotate(-4deg) translateY(4px);box-shadow:0 10px 14px -6px rgba(30,15,5,.5);z-index:2}
+/* Tirita ya arrancada: solo queda un pedacito rasgado y se ve el corcho */
+.tab.gone{background:transparent;border-color:transparent;box-shadow:none;pointer-events:none}
+.tab.gone > *{visibility:hidden}
+.tab.gone::before{
+  content:"";position:absolute;top:-2px;left:0;right:0;height:14px;background:#E6F3EA;
+  border-top:2px dashed #7f9a88;
+  clip-path:polygon(0 0,100% 0,100% 55%,78% 100%,52% 62%,26% 95%,0 70%);
+}
+.tab.torn{animation:tear .7s cubic-bezier(.5,0,.75,0) forwards;pointer-events:none}
+@keyframes tear{
+  0%{transform:rotate(0)}
+  25%{transform:rotate(-8deg) translateY(6px)}
+  100%{transform:rotate(-24deg) translate(-30px,260px);opacity:0}
+}
+.flyer-foot{height:10px}
+
+/* Volantes de muestra al lado */
+.side{display:grid;gap:34px;padding-top:18px}
+.print{padding:10px 10px 14px;width:min(100%,420px)}
+.print img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;background:#ddd}
+.print figcaption{font-size:.95rem;margin-top:10px;display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.print figcaption b{font-family:var(--display);font-stretch:85%;font-weight:800;font-size:1.05rem}
+.stamp{
+  display:inline-block;font-family:var(--display);font-stretch:75%;font-weight:900;text-transform:uppercase;letter-spacing:.12em;
+  color:var(--marker);border:2.5px solid var(--marker);border-radius:4px;padding:1px 7px;font-size:.78rem;transform:rotate(-6deg);opacity:.9;
+}
+.side .print{width:100%}
+.side .p0{transform:rotate(2.6deg)}
+.side .p0 > .tape{top:-12px;left:50%;margin-left:-48px;transform:rotate(-4deg)}
+.side .p1{transform:rotate(-3deg);width:88%;margin-left:4%}
+.side .p1 > .pin{top:-6px;left:22px}
+.side .note-card{
+  position:relative;width:86%;justify-self:end;padding:16px 18px;background:var(--hi);transform:rotate(2deg);
+  font-size:1.02rem;
+}
+.side .note-card > .pin{top:-7px;right:20px}
+.side .note-card p{margin:0}
+
+/* ——— Secciones como hojas ——— */
+section{max-width:1280px;margin:0 auto;padding:clamp(40px,7vw,96px) var(--pad) 0}
+.label{
+  display:inline-block;position:relative;padding:12px 22px 10px;margin:0 0 28px;background:var(--paper);
+  transform:rotate(-1.5deg);
+}
+.label h2{margin:0;font-family:var(--display);font-stretch:70%;font-weight:900;text-transform:uppercase;font-size:clamp(2rem,4.6vw,3.3rem);line-height:.95;letter-spacing:.005em;text-wrap:balance}
+.label > .tape{top:-14px;left:18px;transform:rotate(-8deg);width:80px}
+.label.r{transform:rotate(1.2deg)}
+
+/* Lo que trae */
+.trae{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);align-items:start}
+.list-sheet{padding:clamp(26px,4vw,44px);transform:rotate(.6deg)}
+.list-sheet > .pin{top:10px;left:14px}
+.list-sheet > .pin + .pin{left:auto;right:14px}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.checks li{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.checks svg{width:30px;height:30px;color:var(--marker);margin-top:-2px}
+.checks b{display:block;font-size:1.12rem}
+.checks span{color:var(--ink-2)}
+.ojo{margin:26px 0 0;padding-top:18px;border-top:2px dashed #b9b2a6;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;align-items:baseline}
+.ojo .hand{font-size:1.35rem}
+.ojo p{margin:0}
+.phone-big{padding:10px 10px 14px;max-width:300px;justify-self:center;transform:rotate(-2.5deg)}
+.phone-big img{aspect-ratio:780/1502;width:100%;height:auto;object-fit:cover}
+.phone-big figcaption{font-size:.95rem;margin-top:10px;color:var(--ink-2)}
+.phone-big > .tape{top:-12px;left:50%;margin-left:-48px;transform:rotate(3deg)}
+
+/* Muestras */
+.muestras-intro{max-width:56ch;padding:16px 20px;margin:-8px 0 36px;font-size:1.02rem;transform:rotate(-.4deg)}
+.muestras-intro p{margin:0}
+.wall{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(20px,3vw,36px);align-items:start}
+.wall .print{width:100%}
+.wall .m1{grid-column:1 / span 5;transform:rotate(-2deg)}
+.wall .m2{grid-column:6 / span 4;transform:rotate(1.8deg);margin-top:48px}
+.wall .m3{grid-column:10 / span 3;transform:rotate(-1deg);margin-top:12px}
+.wall .m4{grid-column:2 / span 4;transform:rotate(2.4deg);margin-top:-8px}
+.wall .m5{grid-column:7 / span 5;transform:rotate(-1.6deg);margin-top:-30px}
+.wall .print > .pin{top:-6px;left:50%;margin-left:-9px}
+.wall .print > .tape{top:-12px;left:12px;transform:rotate(-10deg)}
+.wall .print p{margin:6px 0 0;font-size:.95rem;color:var(--ink-2)}
+.wall a.print{text-decoration:none;display:block}
+.live{display:inline-flex;gap:6px;align-items:center;font-weight:700;color:var(--ink);margin-top:8px;text-decoration:underline;text-underline-offset:3px}
+.wall .print:hover{transform:rotate(0) translateY(-6px) scale(1.01);box-shadow:0 2px 2px rgba(40,20,5,.2), 0 22px 30px -10px rgba(40,20,5,.5);z-index:2}
+
+/* Cómo funciona: ficha */
+.ficha{
+  padding:clamp(24px,4vw,44px);max-width:980px;transform:rotate(-.5deg);
+  background-color:var(--paper);
+  background-image:linear-gradient(transparent 39px, rgba(44,127,184,.28) 39px 40px);
+  background-size:100% 40px;background-position:0 30px;
+}
+.ficha > .pin{top:10px;left:50%}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.steps li{position:relative;padding-top:6px}
+.steps .n{font-family:var(--hand);color:var(--marker);font-size:2.6rem;line-height:1;display:block;margin-bottom:6px}
+.steps b{display:block;font-size:1.12rem;margin-bottom:4px}
+.steps p{margin:0;color:var(--ink-2);font-size:1rem}
+
+/* Precio: talonario */
+.precio{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);align-items:start}
+.recibo{
+  padding:clamp(24px,4vw,40px);transform:rotate(.8deg);background:#FFFDF6;
+  border-top:10px solid #E9E2D0;
+}
+.recibo > .pin{top:-4px;left:28px}
+.recibo .head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:6px}
+.recibo .head b{font-family:var(--display);font-stretch:72%;font-weight:900;font-size:1.5rem;text-transform:uppercase}
+.recibo .head span{font-size:.92rem;color:var(--ink-2)}
+.rows{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.rows td{padding:12px 0;border-bottom:1px dashed #b9b2a6;vertical-align:top}
+.rows td:last-child{text-align:right;white-space:nowrap;padding-left:16px;font-weight:700}
+.rows small{display:block;color:var(--ink-2);font-size:.92rem;font-weight:400}
+.rows s{color:var(--ink-2);font-weight:400;margin-right:8px}
+.rows .total td{border-bottom:0;border-top:2px solid var(--ink);font-family:var(--display);font-stretch:80%;font-weight:900;font-size:1.6rem;padding-top:14px}
+.recibo .pay{margin:14px 0 22px;font-size:1rem}
+.recibo .ann{position:absolute;right:18px;top:-26px;transform:rotate(5deg);font-size:1.2rem;background:var(--paper);padding:2px 10px;margin:0;box-shadow:0 3px 8px -3px rgba(40,20,5,.4)}
+.side-notes{display:grid;gap:26px}
+.slip{padding:20px 22px}
+.slip:nth-child(1){transform:rotate(-1.4deg)}
+.slip:nth-child(2){transform:rotate(1deg);background:var(--hi)}
+.slip > .pin{top:-6px;right:24px}
+.slip h3{margin:0 0 6px;font-family:var(--display);font-stretch:80%;font-weight:800;font-size:1.3rem}
+.slip p{margin:0 0 12px}
+.slip p:last-child{margin-bottom:0}
+.link-wa{color:var(--wa-ink);font-weight:700;text-underline-offset:3px}
+
+/* Preguntas */
+.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px;align-items:start}
+.faq details{padding:0;transform:rotate(var(--r,0deg))}
+.faq details:nth-child(odd){--r:-.6deg}
+.faq details:nth-child(even){--r:.7deg}
+.faq summary{cursor:pointer;list-style:none;padding:18px 52px 18px 20px;font-weight:700;font-size:1.08rem;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:20px;top:12px;font-family:var(--hand);color:var(--marker);font-size:1.8rem;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq .ans{padding:0 20px 20px;color:var(--ink-2)}
+
+/* Agenda: tarjeta de cita */
+.cita{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:0;max-width:1040px;transform:rotate(-.4deg)}
+.cita > *, .cita form > *{min-width:0}
+.cita > .pin{top:-6px;left:50%}
+.cita .info{padding:clamp(24px,4vw,40px);border-right:2px dashed #b9b2a6}
+.cita .info h3{margin:0 0 10px;font-family:var(--display);font-stretch:75%;font-weight:900;font-size:1.7rem;text-transform:uppercase;line-height:1}
+.cita .info p{margin:0 0 16px}
+.horario{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:1rem}
+.horario .no{color:var(--marker)}
+.cita form{padding:clamp(24px,4vw,40px);display:grid;gap:18px}
+.fl{font-weight:700;display:block;margin-bottom:8px}
+.fl em{font-style:normal;font-weight:400;color:var(--ink-2)}
+.days{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 8px;scroll-snap-type:x mandatory}
+.day{
+  flex:none;scroll-snap-align:start;width:68px;padding:8px 4px;border:2px solid var(--ink);background:var(--paper);border-radius:6px;
+  font-family:var(--body);cursor:pointer;display:grid;gap:2px;justify-items:center;color:var(--ink);
+}
+.day small{font-size:.85rem;text-transform:capitalize}
+.day b{font-family:var(--display);font-stretch:80%;font-size:1.5rem;line-height:1}
+.day em{font-style:normal;font-size:.8rem}
+.day:disabled{border-color:#c4bdb0;color:#6e6a62;background:var(--paper-2);cursor:not-allowed;text-decoration:line-through}
+.day[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.slots{display:flex;flex-wrap:wrap;gap:8px}
+.slot{border:2px solid var(--ink);background:var(--paper);color:var(--ink);border-radius:6px;padding:10px 14px;font:700 1rem var(--body);cursor:pointer;min-height:44px}
+.slot[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.agempty{color:var(--ink-2)}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.in{width:100%;min-height:48px;border:2px solid var(--ink);border-radius:6px;background:#fff;padding:10px 12px;font:1rem var(--body);color:var(--ink)}
+.in:focus{outline:3px solid var(--hi);outline-offset:0;border-color:var(--ink)}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
+.form-msg{margin:0;font-size:.98rem;color:var(--ink-2)}
+.form-msg.warn{color:var(--marker);font-weight:700}
+
+/* Cierre */
+.cierre{padding-bottom:clamp(48px,7vw,96px)}
+.final{max-width:860px;margin:0 auto;transform:rotate(.8deg);text-align:center}
+.final .sheet{padding:clamp(30px,5vw,56px) clamp(22px,5vw,56px) 14px}
+.final h2{font-family:var(--display);font-stretch:68%;font-weight:900;text-transform:uppercase;font-size:clamp(2.4rem,6.6vw,4.6rem);line-height:.92;margin:6px 0 14px;text-wrap:balance}
+.final p{margin:0 auto 10px;max-width:40ch;font-size:1.12rem}
+.final .contacts{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin:12px 0 4px;font-weight:700}
+.final .contacts a{text-underline-offset:3px}
+
+footer{
+  background:linear-gradient(180deg, #6A4428, var(--wood) 40%, var(--wood-d));border-top:3px solid #2E1B0E;color:#F6E9D2;
+  padding:28px var(--pad) calc(28px + env(safe-area-inset-bottom));
+}
+.ft{max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between;align-items:center;font-size:.98rem}
+.ft nav{display:flex;flex-wrap:wrap;gap:6px 20px}
+.ft a{text-underline-offset:3px;display:inline-block;padding:6px 0}
+
+.wa-float{
+  position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:30;width:60px;height:60px;border-radius:50%;
+  background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 10px 22px -6px rgba(0,0,0,.5);
+  transition:transform .2s, opacity .3s;
+}
+.wa-float svg{width:30px;height:30px}
+.wa-float:hover{transform:scale(1.06)}
+.wa-float.hide{opacity:0;pointer-events:none;transform:scale(.8)}
+
+/* ——— Responsive ——— */
+@media (max-width:1100px){
+  .frame nav{display:none}
+  .idx{display:block}
+  .frame .write{margin-left:0}
+}
+@media (max-width:960px){
+  .hero,.trae,.precio{grid-template-columns:1fr}
+  .side{grid-template-columns:1fr 1fr;gap:24px;align-items:start;padding-top:8px}
+  .side .p1,.side .note-card{width:auto;margin:0;justify-self:stretch}
+  .side .note-card{grid-column:1 / -1}
+  .steps{grid-template-columns:1fr 1fr;gap:28px 24px}
+  .faq{grid-template-columns:1fr}
+  .cita{grid-template-columns:1fr}
+  .cita .info{border-right:0;border-bottom:2px dashed #b9b2a6}
+  .wall{grid-template-columns:1fr 1fr}
+  .wall .m1,.wall .m2,.wall .m3,.wall .m4,.wall .m5{grid-column:auto;margin-top:0}
+  .wall .m1{grid-column:1 / -1}
+}
+@media (max-width:600px){
+  body{font-size:17px}
+  .frame{gap:10px}
+  .brand span{display:none}
+  .frame .write{margin-left:auto}
+  .idx{margin-left:0}
+  .idx ul{left:0;right:auto}
+  .flyer{transform:rotate(-.8deg)}
+  .flyer .sheet{padding-top:58px}
+  .flyer .sheet > .pin{left:24px;margin-left:0;top:16px}
+  .rubber{top:12px;right:14px;padding:4px 9px;transform:rotate(-4deg)}
+  .rubber img{display:none}
+  .rubber span{font-size:.74rem;letter-spacing:.07em}
+  h1{font-size:2.5rem;margin-bottom:10px}
+  .lead{font-size:1.02rem;margin-bottom:12px}
+  .later{font-size:.92rem}
+  .free{font-size:1rem;margin-top:8px}
+  .tear-hint{margin-top:10px;font-size:1.05rem}
+  .tab{height:124px}
+  .tab span{font-size:.9rem}
+  .side{grid-template-columns:1fr}
+  .side .p1{display:none}
+  .phone-big{display:none}
+  .rows s{display:block;margin:0}
+  .wall{grid-template-columns:1fr}
+  .wall .m1{grid-column:auto}
+  .steps{grid-template-columns:1fr}
+  .fields{grid-template-columns:1fr}
+  .recibo .ann{position:static;transform:rotate(-2deg);margin:0 0 10px;max-width:none;text-align:left}
+  .rows .total td{font-size:1.35rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .lift,.tab,.wa-btn,.wa-float{transition:none}
+  .tab:hover,.tab:focus-visible,.wall .print:hover{transform:none}
+  .tab.torn{animation:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.55 2 2.07 6.48 2.07 12c0 1.76.46 3.48 1.34 5L2 22l5.16-1.35a9.94 9.94 0 0 0 4.88 1.24h.01c5.49 0 9.97-4.48 9.97-9.97a9.9 9.9 0 0 0-2.97-7.01zm-7.01 15.36h-.01a8.27 8.27 0 0 1-4.21-1.15l-.3-.18-3.14.82.84-3.06-.2-.32a8.26 8.26 0 0 1-1.27-4.41c0-4.57 3.72-8.29 8.3-8.29 2.21 0 4.29.86 5.85 2.43a8.23 8.23 0 0 1 2.44 5.86c0 4.57-3.73 8.3-8.3 8.3zm4.55-6.21c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.02 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.17-.48-.29z"/></symbol></svg>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="frame">
+  <a class="brand" href="#inicio" aria-label="Vitrina Barrio, inicio"><img src="/img/logo.jpg" width="36" height="36" alt=""><span>Vitrina Barrio</span></a>
+  <nav aria-label="Secciones">
+    <a href="#trae">Qué trae</a>
+    <a href="#muestras">Muestras</a>
+    <a href="#como">Cómo funciona</a>
+    <a href="#precio">Precio</a>
+    <a href="#preguntas">Preguntas</a>
+    <a href="#reunion">Reunión</a>
+  </nav>
+  <details class="idx">
+    <summary aria-label="Abrir índice de secciones">Índice</summary>
+    <ul>
+      <li><a href="#trae">Qué trae tu página</a></li>
+      <li><a href="#muestras">Muestras</a></li>
+      <li><a href="#como">Cómo funciona</a></li>
+      <li><a href="#precio">Precio</a></li>
+      <li><a href="#preguntas">Preguntas</a></li>
+      <li><a href="#reunion">Reunión presencial</a></li>
+    </ul>
+  </details>
+  <a class="wa-btn write" href="https://wa.me/573027742140?text=Hola%2C%20quiero%20mi%20p%C3%A1gina%20web" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+    Escríbenos
+  </a>
+</header>
+
+<div class="board" id="inicio">
+  <div class="hero">
+    <article class="flyer" aria-labelledby="titulo">
+      <div class="sheet paper">
+      <span class="pin" aria-hidden="true"></span>
+      <div class="rubber"><img src="/img/logo.jpg" width="40" height="40" alt=""><span>Vitrina Barrio<br>Bucaramanga</span></div>
+      <h1 id="titulo">Tu negocio merece estar en <mark>Google</mark></h1>
+      <p class="lead">Hacemos la página web de tu negocio con tus fotos, tus servicios, tu ubicación y un botón directo a WhatsApp.</p>
+      <div class="price">
+        <div class="amt">
+          $110.000<small>COP</small>
+          <svg viewBox="0 0 200 80" preserveAspectRatio="none" aria-hidden="true"><path d="M18 46 C 14 18, 70 6, 118 8 C 168 10, 196 26, 192 44 C 188 64, 140 76, 92 74 C 46 72, 8 62, 12 40 C 14 30, 30 20, 52 14" fill="none" stroke="#C8102E" stroke-width="3.2" stroke-linecap="round"/></svg>
+        </div>
+        <p class="note hand">pago único · precio de lanzamiento para los 5 primeros</p>
+      </div>
+      <p class="later">Cuando se acaben esos cupos, la página cuesta $175.000, también pago único.</p>
+      <p class="free">Antes de pagar, te hacemos una <b>muestra gratis</b> de tu página.</p>
+      <p class="tear-hint"><span class="hand">Arranca un papelito y escríbenos</span>
+        <svg viewBox="0 0 42 34" aria-hidden="true"><path d="M4 4 C 18 4, 30 10, 32 28 M24 20 L32 29 L38 19" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </p>
+      </div>
+      <div class="tabs" data-tabs>
+        <a class="tab" href="https://wa.me/573027742140?text=Hola%2C%20vi%20su%20volante%20y%20quiero%20mi%20muestra%20gratis" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp al 302 774 2140 para pedir tu muestra gratis"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span><b>WhatsApp</b><br>302 774 2140</span></a>
+        <a class="tab gone" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span><b>WhatsApp</b><br>302 774 2140</span></a>
+        <a class="tab" href="https://wa.me/573027742140?text=Hola%2C%20vi%20su%20volante%20y%20quiero%20mi%20muestra%20gratis" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span><b>WhatsApp</b><br>302 774 2140</span></a>
+        <a class="tab gone" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span><b>WhatsApp</b><br>302 774 2140</span></a>
+        <a class="tab" href="https://wa.me/573027742140?text=Hola%2C%20vi%20su%20volante%20y%20quiero%20mi%20muestra%20gratis" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span><b>WhatsApp</b><br>302 774 2140</span></a>
+        <a class="tab" href="https://wa.me/573027742140?text=Hola%2C%20vi%20su%20volante%20y%20quiero%20mi%20muestra%20gratis" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span><b>WhatsApp</b><br>302 774 2140</span></a>
+        <a class="tab" href="https://wa.me/573027742140?text=Hola%2C%20vi%20su%20volante%20y%20quiero%20mi%20muestra%20gratis" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span><b>WhatsApp</b><br>302 774 2140</span></a>
+      </div>
+    </article>
+
+    <div class="side">
+      <figure class="print paper p0">
+        <span class="tape" aria-hidden="true"></span>
+        <img src="/img/barberia.jpg" width="1600" height="1000" alt="Muestra de la página de Barbería David Orozco: foto del local, calificación en Google y botón para pedir cita por WhatsApp" fetchpriority="high">
+        <figcaption><b>Barbería David Orozco</b> <span class="stamp">Muestra</span></figcaption>
+      </figure>
+      <figure class="print paper p1">
+        <span class="pin y" aria-hidden="true"></span>
+        <img src="/img/asadero.jpg" width="1280" height="800" alt="Muestra de la página del Asadero de la 76: titular, fotos de chicharrón y botón de pedido">
+        <figcaption><b>Asadero de la 76</b> <span class="stamp">Muestra</span></figcaption>
+      </figure>
+      <aside class="note-card" aria-label="Nota">
+        <span class="pin g" aria-hidden="true"></span>
+        <p><b>Hechas para negocios reales</b> de Bucaramanga, Bogotá y Medellín. <a href="#muestras">Ver todas las muestras</a></p>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<main id="contenido">
+
+<section id="trae" aria-labelledby="h-trae">
+  <div class="label paper"><span class="tape" aria-hidden="true"></span><h2 id="h-trae">Lo que trae tu página</h2></div>
+  <div class="trae">
+    <div class="list-sheet paper">
+      <span class="pin" aria-hidden="true"></span><span class="pin y" aria-hidden="true"></span>
+      <ul class="checks">
+        <li><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L26 6" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Botón directo a tu WhatsApp</b><span>Te escriben con un toque para pedir, reservar o preguntar.</span></div></li>
+        <li><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L26 6" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Mapa de Google y horario</b><span>Para que lleguen sin perderse y sepan cuándo abres.</span></div></li>
+        <li><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L26 6" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Tus fotos y tus servicios</b><span>Tu carta, tu catálogo o tu lista de servicios, con fotos de tu negocio.</span></div></li>
+        <li><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L26 6" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Opiniones de tus clientes</b><span>Mostramos lo que ya dicen de ti en Google.</span></div></li>
+        <li><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L26 6" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Se ve bien en celular y computador</b><span>Hecha primero para el celular, que es donde te buscan.</span></div></li>
+        <li><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 16 L12 23 L26 6" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Cambios ilimitados hasta la entrega</b><span>La ajustamos contigo hasta que quedes cómodo.</span></div></li>
+      </ul>
+      <div class="ojo">
+        <span class="hand">Ojo:</span>
+        <p>no incluye sistema de citas o reservas. Tus clientes te escriben por WhatsApp para pedir o reservar.</p>
+      </div>
+    </div>
+    <figure class="phone-big paper">
+      <span class="tape" aria-hidden="true"></span>
+      <img src="/img/phone_barberia.jpg" width="780" height="1502" loading="lazy" alt="Página de muestra de una barbería en el celular, con el botón verde para pedir cita por WhatsApp">
+      <figcaption>Muestra para Barbería David Orozco, Bucaramanga.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="muestras" aria-labelledby="h-muestras">
+  <div class="label paper r"><span class="tape" aria-hidden="true"></span><h2 id="h-muestras">Muestras en la cartelera</h2></div>
+  <div class="muestras-intro paper">
+    <p>Diseños que hicimos para negocios reales. Los que llevan el sello <span class="stamp">Muestra</span> todavía no están publicados: se publican cuando el dueño los aprueba y paga.</p>
+  </div>
+  <div class="wall">
+    <figure class="print paper m1">
+      <span class="pin" aria-hidden="true"></span>
+      <img src="/img/barberia.jpg" width="1600" height="1000" loading="lazy" alt="Muestra de la página de Barbería David Orozco: foto del local, calificación 5.0 en Google y botón de cita por WhatsApp">
+      <figcaption><b>Barbería David Orozco</b> <span class="stamp">Muestra</span></figcaption>
+      <p>Bucaramanga · horario en vivo y mapa.</p>
+    </figure>
+    <figure class="print paper m2">
+      <span class="tape" aria-hidden="true"></span>
+      <img src="/img/boreal.jpg" width="1280" height="800" loading="lazy" alt="Muestra de la página de BOREAL Peluquería y Barbería, con botón para agendar por WhatsApp">
+      <figcaption><b>BOREAL Peluquería &amp; Barbería</b> <span class="stamp">Muestra</span></figcaption>
+      <p>Medellín · servicios, galería y citas por WhatsApp.</p>
+    </figure>
+    <figure class="print paper m3">
+      <span class="pin y" aria-hidden="true"></span>
+      <img src="/img/clave.jpg" width="1280" height="800" loading="lazy" alt="Muestra de la página de La Clave de Sol, escuela de música">
+      <figcaption><b>La Clave de Sol</b> <span class="stamp">Muestra</span></figcaption>
+      <p>Escuela de música · cursos e inscripciones.</p>
+    </figure>
+    <figure class="print paper m4">
+      <span class="pin g" aria-hidden="true"></span>
+      <img src="/img/asadero.jpg" width="1280" height="800" loading="lazy" alt="Muestra de la página del Asadero de la 76 con su menú">
+      <figcaption><b>Asadero de la 76</b> <span class="stamp">Muestra</span></figcaption>
+      <p>Bogotá · menú, fotos y pedidos por WhatsApp.</p>
+    </figure>
+    <a class="print paper m5" href="/zapateria/" target="_blank" rel="noopener">
+      <span class="tape" aria-hidden="true"></span>
+      <img src="/img/zapateria.jpg" width="1440" height="900" loading="lazy" alt="Catálogo de Tu Zapatería con tenis en 3D">
+      <figcaption><b>Tu Zapatería</b> <span>Publicada</span></figcaption>
+      <p>Catálogo de tenis con modelos en 3D que giran.</p>
+      <span class="live">Verla funcionando →</span>
+    </a>
+  </div>
+</section>
+
+<section id="como" aria-labelledby="h-como">
+  <div class="label paper"><span class="tape" aria-hidden="true"></span><h2 id="h-como">Cómo funciona</h2></div>
+  <div class="ficha paper">
+    <span class="pin" aria-hidden="true"></span>
+    <ol class="steps">
+      <li><span class="n" aria-hidden="true">1</span><b>Nos escribes</b><p>Por WhatsApp, con el nombre de tu negocio. Si quieres, nos vemos en persona.</p></li>
+      <li><span class="n" aria-hidden="true">2</span><b>Te hacemos una muestra gratis</b><p>Una muestra de cómo se vería tu página, hecha para tu negocio.</p></li>
+      <li><span class="n" aria-hidden="true">3</span><b>La ajustamos contigo</b><p>Cambiamos lo que haga falta hasta que quedes cómodo, sin costo extra.</p></li>
+      <li><span class="n" aria-hidden="true">4</span><b>Pagas y la publicamos</b><p>Pagas por Nequi, apruebas la versión final y la publicamos.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="precio" aria-labelledby="h-precio">
+  <div class="label paper r"><span class="tape" aria-hidden="true"></span><h2 id="h-precio">Cuánto cuesta</h2></div>
+  <div class="precio">
+    <div class="recibo paper">
+      <span class="pin" aria-hidden="true"></span>
+      <p class="ann hand">sin letra pequeña</p>
+      <div class="head"><b>Tu página web</b><span>Pago único</span></div>
+      <table class="rows">
+        <caption class="sr">Precio de la página web y costos opcionales</caption>
+        <tbody>
+          <tr><td>Página web a la medida de tu negocio<small>Precio de lanzamiento para los 5 primeros clientes que paguen. Después, $175.000.</small></td><td><s>$175.000</s>$110.000</td></tr>
+          <tr><td>Muestra antes de pagar</td><td>Gratis</td></tr>
+          <tr><td>Cambios hasta la entrega</td><td>Incluidos</td></tr>
+          <tr class="total"><td>Total</td><td>$110.000</td></tr>
+        </tbody>
+      </table>
+      <p class="pay">Se paga por Nequi, una sola vez. Publicamos cuando confirmamos el pago y apruebas la versión final.</p>
+      <a class="wa-btn" href="https://wa.me/573027742140?text=Hola%2C%20quiero%20la%20p%C3%A1gina%20web%20de%20lanzamiento%20de%20%24110.000" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+        Quiero mi página de $110.000
+      </a>
+    </div>
+    <div class="side-notes">
+      <div class="slip paper">
+        <span class="pin y" aria-hidden="true"></span>
+        <h3>Costos aparte, si los quieres</h3>
+        <p><b>Dominio propio</b> (por ejemplo, <i>tunegocio.com</i>): $30.000 al mes, para mantener el dominio y el servidor. Es opcional.</p>
+        <p><b>Cambios después de la entrega:</b> tienen un costo adicional, salvo que sea un error nuestro.</p>
+      </div>
+      <div class="slip paper">
+        <span class="pin" aria-hidden="true"></span>
+        <h3>¿Necesitas citas, inventario o pedidos?</h3>
+        <p>También hacemos sistemas para administrar tu negocio, con pago mensual. <a class="link-wa" href="https://wa.me/573027742140?text=Hola%2C%20quiero%20saber%20de%20los%20sistemas%20para%20mi%20negocio" target="_blank" rel="noopener">Pregúntanos por WhatsApp</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="preguntas" aria-labelledby="h-preg">
+  <div class="label paper"><span class="tape" aria-hidden="true"></span><h2 id="h-preg">Preguntas</h2></div>
+  <div class="faq">
+    <details class="paper" open>
+      <summary>¿La página a $110.000 es para todos?</summary>
+      <div class="ans">No. Es el precio de lanzamiento para los 5 primeros clientes que paguen, mientras haya cupos. Después, la página cuesta $175.000, también de pago único.</div>
+    </details>
+    <details class="paper">
+      <summary>¿Tengo que pagar antes de ver algo?</summary>
+      <div class="ans">No. Primero te hacemos una muestra gratis de tu página. Si te gusta, la ajustamos contigo, pagas por Nequi y la publicamos.</div>
+    </details>
+    <details class="paper">
+      <summary>¿El sistema de citas o reservas viene con la página?</summary>
+      <div class="ans">No. La página trae un botón directo a WhatsApp para que te escriban a pedir o reservar. Si quieres un sistema de citas, pregúntanos por los sistemas mensuales.</div>
+    </details>
+    <details class="paper">
+      <summary>¿Puedo tener mi propio dominio, como tunegocio.com?</summary>
+      <div class="ans">Sí, es opcional. Se suman $30.000 al mes para mantener el dominio y el servidor.</div>
+    </details>
+    <details class="paper">
+      <summary>¿Qué pasa si quiero cambiar algo después?</summary>
+      <div class="ans">Hasta la entrega, los cambios son ilimitados. Después, los cambios nuevos tienen un costo adicional, salvo que sea un error nuestro.</div>
+    </details>
+    <details class="paper">
+      <summary>¿Trabajan solo en Bucaramanga?</summary>
+      <div class="ans">Estamos en Bucaramanga, pero hacemos páginas para negocios de cualquier ciudad de Colombia. Todo se puede hacer por WhatsApp.</div>
+    </details>
+  </div>
+</section>
+
+<section id="reunion" aria-labelledby="h-reunion">
+  <div class="label paper r"><span class="tape" aria-hidden="true"></span><h2 id="h-reunion">¿Prefieres en persona?</h2></div>
+  <div class="cita paper">
+    <span class="pin y" aria-hidden="true"></span>
+    <div class="info">
+      <h3>Reunión presencial</h3>
+      <p>Nos sentamos contigo, vemos tu negocio y te mostramos cómo quedaría tu página.</p>
+      <ul class="horario">
+        <li>Lunes, martes, jueves, viernes, sábado y domingo, de 2:00 a 8:00 pm</li>
+        <li class="no">Los miércoles no hay cupos</li>
+        <li class="no">El sábado y domingo de esta semana, cerrado</li>
+      </ul>
+    </div>
+    <form id="agForm" novalidate>
+      <div>
+        <span class="fl" id="lD">1. Elige el día</span>
+        <div class="days" id="days" role="group" aria-labelledby="lD"></div>
+      </div>
+      <div>
+        <span class="fl" id="lH">2. Elige la hora</span>
+        <div class="slots" id="slots" role="group" aria-labelledby="lH"></div>
+      </div>
+      <div class="fields">
+        <label><span class="fl">3. Tu nombre</span><input class="in" id="agN" autocomplete="name" placeholder="Ej: Camila" required aria-describedby="agMsg"></label>
+        <label><span class="fl">Nombre del negocio <em>(opcional)</em></span><input class="in" id="agB" placeholder="Ej: Panadería La Esquina"></label>
+      </div>
+      <div class="form-foot">
+        <button class="wa-btn" type="submit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+          Pedir la cita por WhatsApp
+        </button>
+        <p class="form-msg" id="agMsg" aria-live="polite">La cita queda confirmada cuando te respondamos.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="cierre" aria-labelledby="h-final">
+  <article class="final">
+    <div class="sheet paper">
+    <span class="pin" aria-hidden="true"></span>
+    <h2 id="h-final">¿Listo para que te encuentren?</h2>
+    <p>Escríbenos y te hacemos una muestra gratis de la página de tu negocio.</p>
+    <p class="contacts"><a href="mailto:vitrinabarrio@gmail.com">vitrinabarrio@gmail.com</a><a href="https://www.instagram.com/vitrinabarrio/" target="_blank" rel="noopener">Instagram @vitrinabarrio</a></p>
+    </div>
+    <div class="tabs" data-tabs>
+      <a class="tab" href="https://wa.me/573027742140?text=Hola%2C%20quiero%20mi%20muestra%20gratis" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp al 302 774 2140"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span><b>WhatsApp</b><br>302 774 2140</span></a>
+      <a class="tab" href="https://wa.me/573027742140?text=Hola%2C%20quiero%20mi%20muestra%20gratis" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span><b>WhatsApp</b><br>302 774 2140</span></a>
+      <a class="tab gone" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span><b>WhatsApp</b><br>302 774 2140</span></a>
+      <a class="tab" href="https://wa.me/573027742140?text=Hola%2C%20quiero%20mi%20muestra%20gratis" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span><b>WhatsApp</b><br>302 774 2140</span></a>
+      <a class="tab" href="https://wa.me/573027742140?text=Hola%2C%20quiero%20mi%20muestra%20gratis" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span><b>WhatsApp</b><br>302 774 2140</span></a>
+      <a class="tab" href="https://wa.me/573027742140?text=Hola%2C%20quiero%20mi%20muestra%20gratis" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span><b>WhatsApp</b><br>302 774 2140</span></a>
+      <a class="tab" href="https://wa.me/573027742140?text=Hola%2C%20quiero%20mi%20muestra%20gratis" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span><b>WhatsApp</b><br>302 774 2140</span></a>
+    </div>
+  </article>
+</section>
+
+</main>
+
+<footer>
+  <div class="ft">
+    <div>© 2026 Vitrina Barrio · Bucaramanga, Colombia</div>
+    <nav aria-label="Otros enlaces">
+      <a href="/catalogo/">Accesorios para celular</a>
+      <a href="/privacidad.html">Política de datos</a>
+      <a href="/terminos.html">Términos y condiciones</a>
+      <a href="mailto:vitrinabarrio@gmail.com">PQRS</a>
+    </nav>
+  </div>
+</footer>
+
+<a class="wa-float" id="waFloat" href="https://wa.me/573027742140?text=Hola%2C%20quiero%20mi%20p%C3%A1gina%20web" aria-label="Escribir por WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+</a>
+
+<script>
+(function(){
+  // Tiritas: al tocarla, la tirita se desprende y WhatsApp se abre en otra pestaña
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('[data-tabs] .tab[href]').forEach(function(t){
+    t.addEventListener('click', function(){
+      if(reduce) return;
+      t.classList.add('torn');
+      setTimeout(function(){ t.classList.add('gone'); t.classList.remove('torn'); }, 750);
+    });
+  });
+
+  // Índice en celular: se cierra al elegir una sección o al tocar fuera
+  var idx = document.querySelector('.idx');
+  idx.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ idx.open = false; }); });
+  document.addEventListener('click', function(e){ if(idx.open && !idx.contains(e.target)) idx.open = false; });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && idx.open){ idx.open = false; idx.querySelector('summary').focus(); } });
+
+  // El botón flotante se oculta mientras las tiritas del volante están a la vista
+  var fl = document.getElementById('waFloat');
+  if('IntersectionObserver' in window){
+    var seen = new Set();
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ e.isIntersecting ? seen.add(e.target) : seen.delete(e.target); });
+      fl.classList.toggle('hide', seen.size > 0);
+    });
+    document.querySelectorAll('[data-tabs]').forEach(function(el){ io.observe(el); });
+  }
+})();
+
+/* Reunión presencial: días y horas disponibles (hora de Colombia, UTC-5) */
+function agDays(nowMs,n){var D=['dom','lun','mar','mié','jue','vie','sáb'],M=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];var b=new Date(nowMs-5*36e5),out=[],eow=(7-b.getUTCDay())%7;for(var i=0;i<n;i++){var d=new Date(Date.UTC(b.getUTCFullYear(),b.getUTCMonth(),b.getUTCDate()+i)),w=d.getUTCDay(),st='ok',sl=[];if((w===0||w===6)&&i<=eow)st='cerrado';else if(w===3)st='sin';else{for(var h=14;h<=19;h++)if(i>0||h>b.getUTCHours())sl.push(h);if(!sl.length)st='lleno';}out.push({w:w,dn:D[w],num:d.getUTCDate(),mes:M[d.getUTCMonth()],st:st,sl:sl});}return out;}
+(function(){
+  var N='573027742140', fmtH=function(h){return (h>12?h-12:h)+':00 pm';};
+  var AG=agDays(Date.now(),14), dEl=document.getElementById('days'), sEl=document.getElementById('slots'),
+      form=document.getElementById('agForm'), msg=document.getElementById('agMsg'), nm=document.getElementById('agN');
+  var selD=null, selH=null;
+  AG.forEach(function(x,i){
+    var b=document.createElement('button'); b.type='button'; b.className='day'; b.setAttribute('aria-pressed','false');
+    b.disabled = x.st!=='ok';
+    var tag = x.st==='cerrado' ? 'cerrado' : x.st==='sin' ? 'sin cupos' : x.st==='lleno' ? 'sin horas' : x.mes;
+    b.innerHTML='<small>'+(i===0?'hoy':x.dn)+'</small><b>'+x.num+'</b><em>'+tag+'</em>';
+    b.setAttribute('aria-label', x.dn+' '+x.num+' de '+x.mes+(b.disabled?', no disponible':''));
+    b.onclick=function(){ dEl.querySelectorAll('.day').forEach(function(y){y.setAttribute('aria-pressed','false');}); b.setAttribute('aria-pressed','true'); selD=x; selH=null; slots(); };
+    dEl.appendChild(b);
+  });
+  function slots(){
+    sEl.innerHTML='';
+    if(!selD){ sEl.innerHTML='<p class="agempty">Primero elige un día.</p>'; return; }
+    selD.sl.forEach(function(h){
+      var b=document.createElement('button'); b.type='button'; b.className='slot'; b.textContent=fmtH(h); b.setAttribute('aria-pressed','false');
+      b.onclick=function(){ sEl.querySelectorAll('.slot').forEach(function(y){y.setAttribute('aria-pressed','false');}); b.setAttribute('aria-pressed','true'); selH=h; };
+      sEl.appendChild(b);
+    });
+  }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var n=nm.value.trim(), bz=document.getElementById('agB').value.trim();
+    var falta = !selD ? 'el día' : selH===null ? 'la hora' : !n ? 'tu nombre' : '';
+    if(falta){
+      msg.textContent='Falta '+falta+' para pedir la cita.'; msg.classList.add('warn');
+      if(falta==='tu nombre') nm.focus();
+      return;
+    }
+    msg.textContent='Abrimos WhatsApp con tu cita lista para enviar.'; msg.classList.remove('warn');
+    var m='Hola, quiero agendar una reunión presencial con Vitrina Barrio.\nDía: '+selD.dn+' '+selD.num+' de '+selD.mes+'\nHora: '+fmtH(selH)+'\nNombre: '+n+(bz?'\nNegocio: '+bz:'');
+    window.open('https://wa.me/'+N+'?text='+encodeURIComponent(m), '_blank', 'noopener');
+  });
+  var f=dEl.querySelector('.day:not(:disabled)'); if(f) f.click(); else slots();
+})();
+</script>
+</body>
+</html>
