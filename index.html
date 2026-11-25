@@ -676,6 +676,23 @@ footer{padding:48px var(--pad) 40px;color:var(--muted);font-size:.88rem}
 @media (max-width:560px){
   .vitrina{height:200px !important}
 }
+
+/* ——— Proveedores ——— */
+.proveedores{
+  background:var(--ink);color:#fff;position:relative;overflow:hidden;
+}
+.proveedores::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 55% 70% at 100% 0%, rgba(255,78,42,.18), transparent 55%);
+}
+.proveedores .kicker{color:var(--gold)}
+.proveedores h2 em{color:var(--gold)}
+.proveedores .sub{color:rgba(255,251,244,.7)}
+.prov-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:32px;position:relative}
+
+@media (max-width:1180px){
+  .menu{gap:16px}
+}
 </style>
 
 <script>
@@ -719,6 +736,7 @@ footer{padding:48px var(--pad) 40px;color:var(--muted);font-size:.88rem}
   </a>
   <nav class="menu" id="menu">
     <a href="#trabajo" data-close>Trabajo</a>
+    <a href="#proveedores" data-close>Proveedores</a>
     <a href="#incluye" data-close>Qué incluye</a>
     <a href="#precios" data-close>Precios</a>
     <a href="#como" data-close>Cómo funciona</a>
@@ -861,9 +879,25 @@ footer{padding:48px var(--pad) 40px;color:var(--muted);font-size:.88rem}
       </a>
     </div>
   </div>
+
+</section>
+
+<section class="proveedores" id="proveedores">
+  <div class="wrap">
+    <div class="rev" style="text-align:center">
+      <div class="kicker center">Proveedores</div>
+      <h2>Accesorios para celular en <em>Bucaramanga</em></h2>
+      <p class="sub center">También tenemos un catálogo de accesorios para celular, con productos Yookie. Está disponible al por mayor, para tiendas de barrio, y en venta por unidad.</p>
+    </div>
+    <div class="prov-actions">
+      <a class="btn" href="https://maiguxd.github.io/catalogo/#mayor">Al por mayor</a>
+      <a class="btn gold" href="https://maiguxd.github.io/catalogo/#detal">Venta por unidad</a>
+    </div>
+  </div>
 </section>
 
 <section id="incluye">
+
   <div class="wrap">
     <div class="rev" style="text-align:center">
       <div class="kicker center">Qué incluye tu página</div>
