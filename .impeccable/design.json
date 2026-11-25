@@ -1,0 +1,575 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-25T17:57:53+00:00",
+  "title": "Design System: Vitrina Barrio",
+  "extensions": {
+    "colorMeta": {
+      "cork": {
+        "role": "neutral",
+        "displayName": "Board Cork",
+        "canonical": "#B98A5C",
+        "tonalRamp": [
+          "#30261D",
+          "#56422F",
+          "#7F5E3E",
+          "#AA7A4B",
+          "#BC9671",
+          "#CAB29B",
+          "#DDD1C5",
+          "#F5F2F0"
+        ]
+      },
+      "cork-dark": {
+        "role": "neutral",
+        "displayName": "Cork Grain Dark",
+        "canonical": "#8E6038",
+        "tonalRamp": [
+          "#30261C",
+          "#57412D",
+          "#815C3B",
+          "#AE7746",
+          "#BF946E",
+          "#CCB199",
+          "#DED0C4",
+          "#F5F2EF"
+        ]
+      },
+      "cork-light": {
+        "role": "neutral",
+        "displayName": "Cork Grain Light",
+        "canonical": "#D3A878",
+        "tonalRamp": [
+          "#32271A",
+          "#5B4429",
+          "#876135",
+          "#B77E3E",
+          "#C69967",
+          "#D1B494",
+          "#E0D2C2",
+          "#F6F2EF"
+        ]
+      },
+      "wood": {
+        "role": "neutral",
+        "displayName": "Board Wood",
+        "canonical": "#5B3A21",
+        "tonalRamp": [
+          "#31251B",
+          "#593F2B",
+          "#845939",
+          "#B27342",
+          "#C3906A",
+          "#CEAF97",
+          "#DFCFC3",
+          "#F5F2EF"
+        ]
+      },
+      "wood-dark": {
+        "role": "neutral",
+        "displayName": "Wood Dark",
+        "canonical": "#3F2715",
+        "tonalRamp": [
+          "#32251A",
+          "#5B3F2A",
+          "#875936",
+          "#B6723F",
+          "#C69067",
+          "#D0AE95",
+          "#E0CFC2",
+          "#F5F2EF"
+        ]
+      },
+      "wood-light": {
+        "role": "neutral",
+        "displayName": "Wood Light",
+        "canonical": "#6A4428",
+        "tonalRamp": [
+          "#31251C",
+          "#583F2C",
+          "#83593A",
+          "#B17244",
+          "#C1906C",
+          "#CDAE98",
+          "#DFCFC4",
+          "#F5F2EF"
+        ]
+      },
+      "wood-edge": {
+        "role": "neutral",
+        "displayName": "Wood Edge",
+        "canonical": "#2E1B0E",
+        "tonalRamp": [
+          "#33241A",
+          "#5C3D28",
+          "#895633",
+          "#BA6E3B",
+          "#C98D64",
+          "#D2AD93",
+          "#E1CEC1",
+          "#F6F2EF"
+        ]
+      },
+      "frame-cream": {
+        "role": "neutral",
+        "displayName": "Frame Cream",
+        "canonical": "#F6E9D2",
+        "tonalRamp": [
+          "#362B17",
+          "#634B22",
+          "#946D28",
+          "#CA912B",
+          "#D5A858",
+          "#DABE8B",
+          "#E5D7BD",
+          "#F7F3EE"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Bone Paper",
+        "canonical": "#FBF8F0",
+        "tonalRamp": [
+          "#342C19",
+          "#5F4F26",
+          "#8D7430",
+          "#C09A35",
+          "#CDAF60",
+          "#D5C290",
+          "#E2D9C0",
+          "#F6F4EF"
+        ]
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Paper 2",
+        "canonical": "#F3EEE1",
+        "tonalRamp": [
+          "#302B1C",
+          "#574C2D",
+          "#816E3C",
+          "#AE9147",
+          "#BFA86E",
+          "#CCBE99",
+          "#DED7C4",
+          "#F5F3EF"
+        ]
+      },
+      "receipt-paper": {
+        "role": "neutral",
+        "displayName": "Receipt Paper",
+        "canonical": "#FFFDF6",
+        "tonalRamp": [
+          "#3E330F",
+          "#735D12",
+          "#AF8B0D",
+          "#F2BD03",
+          "#F5CB38",
+          "#EED477",
+          "#EFE2B3",
+          "#F9F6EC"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1B1B1B",
+        "tonalRamp": [
+          "#262626",
+          "#424242",
+          "#5E5E5E",
+          "#7A7A7A",
+          "#969696",
+          "#B2B2B2",
+          "#D1D1D1",
+          "#F2F2F2"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink 2",
+        "canonical": "#4A4740",
+        "tonalRamp": [
+          "#282725",
+          "#46443F",
+          "#646158",
+          "#837E72",
+          "#9D9990",
+          "#B7B4AE",
+          "#D3D2CF",
+          "#F3F2F2"
+        ]
+      },
+      "rule-dashed": {
+        "role": "neutral",
+        "displayName": "Dashed Rule",
+        "canonical": "#B9B2A6",
+        "tonalRamp": [
+          "#292723",
+          "#48443C",
+          "#686155",
+          "#897E6C",
+          "#A2998B",
+          "#BAB4AB",
+          "#D5D2CE",
+          "#F3F2F1"
+        ]
+      },
+      "marker": {
+        "role": "secondary",
+        "displayName": "Marker Red",
+        "canonical": "#C8102E",
+        "tonalRamp": [
+          "#3A1219",
+          "#6C1926",
+          "#A31930",
+          "#E01436",
+          "#E74660",
+          "#E58090",
+          "#EAB8C0",
+          "#F8EDEF"
+        ]
+      },
+      "highlighter": {
+        "role": "secondary",
+        "displayName": "Highlighter Yellow",
+        "canonical": "#FFE14A",
+        "tonalRamp": [
+          "#3E360F",
+          "#736312",
+          "#AF940D",
+          "#F2CA03",
+          "#F5D538",
+          "#EEDA77",
+          "#EFE5B3",
+          "#F9F7EC"
+        ]
+      },
+      "pin-red": {
+        "role": "tertiary",
+        "displayName": "Tack Red",
+        "canonical": "#D7262E",
+        "tonalRamp": [
+          "#371617",
+          "#642023",
+          "#97262B",
+          "#CE272E",
+          "#D8555B",
+          "#DC898D",
+          "#E6BCBE",
+          "#F7EEEE"
+        ]
+      },
+      "whatsapp": {
+        "role": "primary",
+        "displayName": "WhatsApp Green",
+        "canonical": "#157F3F",
+        "tonalRamp": [
+          "#153723",
+          "#1F653B",
+          "#249852",
+          "#25D069",
+          "#53DA88",
+          "#88DDAA",
+          "#BCE6CD",
+          "#EEF7F1"
+        ]
+      },
+      "whatsapp-ink": {
+        "role": "primary",
+        "displayName": "WhatsApp Ink",
+        "canonical": "#0E6B33",
+        "tonalRamp": [
+          "#143823",
+          "#1D683B",
+          "#209C52",
+          "#1ED668",
+          "#4EDF88",
+          "#85E0A9",
+          "#BAE8CC",
+          "#EDF7F1"
+        ]
+      },
+      "tab-mint": {
+        "role": "primary",
+        "displayName": "Tab Mint",
+        "canonical": "#E6F3EA",
+        "tonalRamp": [
+          "#1E2F23",
+          "#31533C",
+          "#427B53",
+          "#50A46A",
+          "#75B88A",
+          "#9EC7AA",
+          "#C7DCCD",
+          "#F0F5F1"
+        ]
+      }
+    },
+    "pinVariants": [
+      {
+        "name": "pin-red",
+        "head": "#D7262E",
+        "highlight": "#ff8a8a",
+        "shade": "#8f1016"
+      },
+      {
+        "name": "pin-yellow",
+        "head": "#E9B21A",
+        "highlight": "#fff4b0",
+        "shade": "#8a6200"
+      },
+      {
+        "name": "pin-blue",
+        "head": "#2C7FB8",
+        "highlight": "#d5f2ff",
+        "shade": "#11405f"
+      }
+    ],
+    "materials": [
+      {
+        "name": "cork-grain",
+        "value": "background-color:#B98A5C; background-image: radial-gradient(circle at 30% 40%, #8E6038 0 1px, transparent 1.6px), radial-gradient(circle at 70% 60%, #D3A878 0 1.2px, transparent 1.8px), radial-gradient(circle at 50% 50%, rgba(80,45,20,.35) 0 1.6px, transparent 2.4px), radial-gradient(circle at 20% 80%, rgba(255,230,190,.35) 0 .9px, transparent 1.4px); background-size:7px 9px, 11px 13px, 23px 19px, 5px 6px",
+        "purpose": "Full-bleed page background."
+      },
+      {
+        "name": "wood-frame",
+        "value": "linear-gradient(180deg, #6A4428, #5B3A21 55%, #3F2715); border 3px solid #2E1B0E",
+        "purpose": "Sticky header and footer rail."
+      },
+      {
+        "name": "tape",
+        "value": "rgba(250,243,214,.72); 96x28px; clip-path: polygon(3% 0,100% 6%,97% 100%,0 92%)",
+        "purpose": "Translucent tape strip fastening paper."
+      },
+      {
+        "name": "highlighter-stroke",
+        "value": "linear-gradient(transparent 58%, #FFE14A 58% 92%, transparent 92%)",
+        "purpose": "Highlight under a headline word."
+      },
+      {
+        "name": "index-card-ruling",
+        "value": "linear-gradient(transparent 39px, rgba(44,127,184,.28) 39px 40px) / 100% 40px",
+        "purpose": "Ruled index card (Cómo funciona)."
+      },
+      {
+        "name": "receipt-pad-stub",
+        "value": "border-top: 10px solid #E9E2D0",
+        "purpose": "Top band of the price receipt."
+      },
+      {
+        "name": "rubber-stamp-blue",
+        "value": "#2B4C8C",
+        "purpose": "Ink of the brand logo stamp on the hero flyer only."
+      }
+    ],
+    "shadows": [
+      {
+        "name": "paper-rest",
+        "value": "0 1px 1px rgba(40,20,5,.25), 0 6px 14px -4px rgba(40,20,5,.35)",
+        "purpose": "Every paper piece at rest."
+      },
+      {
+        "name": "paper-lifted",
+        "value": "0 2px 2px rgba(40,20,5,.2), 0 22px 30px -10px rgba(40,20,5,.5)",
+        "purpose": "Hovered sample prints."
+      },
+      {
+        "name": "menu-sheet",
+        "value": "0 10px 24px -6px rgba(30,15,5,.55)",
+        "purpose": "Open Índice dropdown."
+      },
+      {
+        "name": "tack",
+        "value": "2px 4px 4px rgba(30,10,0,.45)",
+        "purpose": "Push-pin heads."
+      },
+      {
+        "name": "tape",
+        "value": "0 1px 2px rgba(40,20,5,.2)",
+        "purpose": "Tape strips."
+      },
+      {
+        "name": "tab",
+        "value": "0 6px 8px -6px rgba(40,20,5,.45)",
+        "purpose": "Tear-off tab at rest; hover 0 10px 14px -6px rgba(30,15,5,.5)."
+      },
+      {
+        "name": "button",
+        "value": "0 4px 10px -4px rgba(0,0,0,.45)",
+        "purpose": "WhatsApp button at rest; hover 0 10px 18px -6px rgba(0,0,0,.45)."
+      },
+      {
+        "name": "float",
+        "value": "0 10px 22px -6px rgba(0,0,0,.5)",
+        "purpose": "Floating WhatsApp button."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-lift",
+        "value": "cubic-bezier(.2,.8,.2,1)",
+        "purpose": "Paper lift (0.35s) and tab swing (0.3s)."
+      },
+      {
+        "name": "tear",
+        "value": "0.7s cubic-bezier(.5,0,.75,0); 25% rotate(-8deg) translateY(6px); 100% rotate(-24deg) translate(-30px,260px), opacity 0",
+        "purpose": "A tapped tab tears off and falls while WhatsApp opens."
+      },
+      {
+        "name": "button-press",
+        "value": "0.2s",
+        "purpose": "WhatsApp button rise/press and float scale."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Disables lift, swing, tear and smooth scroll."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "nav-collapse",
+        "value": "1100px"
+      },
+      {
+        "name": "stack",
+        "value": "960px"
+      },
+      {
+        "name": "phone",
+        "value": "600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "WhatsApp Button",
+      "kind": "button",
+      "refersTo": "button-whatsapp",
+      "description": "The only filled action: opens WhatsApp with a pre-written message.",
+      "html": "<a class=\"ds-btn-wa\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.55 2 2.07 6.48 2.07 12c0 1.76.46 3.48 1.34 5L2 22l5.16-1.35a9.94 9.94 0 0 0 4.88 1.24h.01c5.49 0 9.97-4.48 9.97-9.97a9.9 9.9 0 0 0-2.97-7.01zm-7.01 15.36h-.01a8.27 8.27 0 0 1-4.21-1.15l-.3-.18-3.14.82.84-3.06-.2-.32a8.26 8.26 0 0 1-1.27-4.41c0-4.57 3.72-8.29 8.3-8.29 2.21 0 4.29.86 5.85 2.43a8.23 8.23 0 0 1 2.44 5.86c0 4.57-3.73 8.3-8.3 8.3zm4.55-6.21c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.02 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.17-.48-.29z\"/></svg>Escríbenos</a>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Lexend:wght@400;600;700&family=Permanent+Marker&display=swap');.ds-btn-wa{display:inline-flex;align-items:center;gap:10px;background:#157F3F;color:#fff;text-decoration:none;font:700 1rem Lexend,system-ui,sans-serif;padding:12px 20px;border-radius:8px;min-height:48px;box-shadow:0 4px 10px -4px rgba(0,0,0,.45);transition:transform .2s,box-shadow .2s}.ds-btn-wa svg{width:22px;height:22px}.ds-btn-wa:hover{transform:translateY(-2px);box-shadow:0 10px 18px -6px rgba(0,0,0,.45)}.ds-btn-wa:active{transform:translateY(1px);box-shadow:0 2px 4px -2px rgba(0,0,0,.45)}.ds-btn-wa:focus-visible{outline:3px solid #1B1B1B;outline-offset:3px}"
+    },
+    {
+      "name": "Tear-off Tabs",
+      "kind": "custom",
+      "refersTo": "tear-tab",
+      "description": "Signature: vertical WhatsApp tabs hanging from a flyer; one already torn off.",
+      "html": "<div class=\"ds-tabs\"><a class=\"ds-tab\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.55 2 2.07 6.48 2.07 12c0 1.76.46 3.48 1.34 5L2 22l5.16-1.35a9.94 9.94 0 0 0 4.88 1.24h.01c5.49 0 9.97-4.48 9.97-9.97a9.9 9.9 0 0 0-2.97-7.01zm-7.01 15.36h-.01a8.27 8.27 0 0 1-4.21-1.15l-.3-.18-3.14.82.84-3.06-.2-.32a8.26 8.26 0 0 1-1.27-4.41c0-4.57 3.72-8.29 8.3-8.29 2.21 0 4.29.86 5.85 2.43a8.23 8.23 0 0 1 2.44 5.86c0 4.57-3.73 8.3-8.3 8.3zm4.55-6.21c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.02 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.17-.48-.29z\"/></svg><span><b>WhatsApp</b><br>302 774 2140</span></a><span class=\"ds-tab ds-gone\"></span><a class=\"ds-tab\" href=\"#\" tabindex=\"-1\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.55 2 2.07 6.48 2.07 12c0 1.76.46 3.48 1.34 5L2 22l5.16-1.35a9.94 9.94 0 0 0 4.88 1.24h.01c5.49 0 9.97-4.48 9.97-9.97a9.9 9.9 0 0 0-2.97-7.01zm-7.01 15.36h-.01a8.27 8.27 0 0 1-4.21-1.15l-.3-.18-3.14.82.84-3.06-.2-.32a8.26 8.26 0 0 1-1.27-4.41c0-4.57 3.72-8.29 8.3-8.29 2.21 0 4.29.86 5.85 2.43a8.23 8.23 0 0 1 2.44 5.86c0 4.57-3.73 8.3-8.3 8.3zm4.55-6.21c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.02 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.17-.48-.29z\"/></svg><span><b>WhatsApp</b><br>302 774 2140</span></a><a class=\"ds-tab\" href=\"#\" tabindex=\"-1\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.55 2 2.07 6.48 2.07 12c0 1.76.46 3.48 1.34 5L2 22l5.16-1.35a9.94 9.94 0 0 0 4.88 1.24h.01c5.49 0 9.97-4.48 9.97-9.97a9.9 9.9 0 0 0-2.97-7.01zm-7.01 15.36h-.01a8.27 8.27 0 0 1-4.21-1.15l-.3-.18-3.14.82.84-3.06-.2-.32a8.26 8.26 0 0 1-1.27-4.41c0-4.57 3.72-8.29 8.3-8.29 2.21 0 4.29.86 5.85 2.43a8.23 8.23 0 0 1 2.44 5.86c0 4.57-3.73 8.3-8.3 8.3zm4.55-6.21c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.02 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.17-.48-.29z\"/></svg><span><b>WhatsApp</b><br>302 774 2140</span></a></div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Lexend:wght@400;600;700&family=Permanent+Marker&display=swap');.ds-tabs{display:flex;max-width:320px;background:#B98A5C}.ds-tab{flex:1 1 0;height:132px;position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;padding-top:10px;background:#E6F3EA;color:#0E6B33;text-decoration:none;border-top:2px dashed #7f9a88;border-right:1.5px dashed #8fae99;box-shadow:0 6px 8px -6px rgba(40,20,5,.45);transform-origin:50% 0;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}.ds-tab svg{width:20px;height:20px;color:#157F3F}.ds-tab span{writing-mode:vertical-rl;transform:rotate(180deg);font:800 .98rem/1.1 Archivo,'Arial Narrow',sans-serif;font-stretch:70%;white-space:nowrap}.ds-tab b{font-weight:900;color:#1B1B1B}.ds-tab:hover,.ds-tab:focus-visible{transform:rotate(-4deg) translateY(4px);box-shadow:0 10px 14px -6px rgba(30,15,5,.5);z-index:2}.ds-tab:focus-visible{outline:3px solid #1B1B1B;outline-offset:3px}.ds-gone{background:transparent;border-color:transparent;box-shadow:none}.ds-gone::before{content:'';position:absolute;top:-2px;left:0;right:0;height:14px;background:#E6F3EA;border-top:2px dashed #7f9a88;clip-path:polygon(0 0,100% 0,100% 55%,78% 100%,52% 62%,26% 95%,0 70%)}"
+    },
+    {
+      "name": "Pinned Paper Sheet",
+      "kind": "card",
+      "refersTo": "paper-sheet",
+      "description": "Every content block: square-cut bone paper, tilted, held by a tack; lifts when touched.",
+      "html": "<div class=\"ds-board\"><div class=\"ds-paper\"><span class=\"ds-pin\"></span><p>Hacemos la página web de tu negocio con tus fotos, tus servicios y un botón directo a WhatsApp.</p></div></div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Lexend:wght@400;600;700&family=Permanent+Marker&display=swap');.ds-board{background:#B98A5C;padding:32px}.ds-paper{position:relative;background:#FBF8F0;color:#1B1B1B;padding:32px 28px 24px;font:400 18px/1.55 Lexend,system-ui,sans-serif;transform:rotate(-1.2deg);box-shadow:0 1px 1px rgba(40,20,5,.25),0 6px 14px -4px rgba(40,20,5,.35);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s cubic-bezier(.2,.8,.2,1)}.ds-paper:hover{transform:rotate(0) translateY(-6px);box-shadow:0 2px 2px rgba(40,20,5,.2),0 22px 30px -10px rgba(40,20,5,.5)}.ds-paper p{margin:0}.ds-pin{position:absolute;top:10px;left:50%;margin-left:-9px;width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 35% 32%,#ff8a8a 0 2px,#D7262E 3.5px 6px,#8f1016 9px);box-shadow:2px 4px 4px rgba(30,10,0,.45)}"
+    },
+    {
+      "name": "Section Label",
+      "kind": "custom",
+      "refersTo": "section-label",
+      "description": "Section heading printed on a taped paper label.",
+      "html": "<div class=\"ds-board\"><div class=\"ds-label\"><span class=\"ds-tape\"></span><h2>Cuánto cuesta</h2></div></div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Lexend:wght@400;600;700&family=Permanent+Marker&display=swap');.ds-board{background:#B98A5C;padding:32px}.ds-label{display:inline-block;position:relative;padding:12px 22px 10px;background:#FBF8F0;transform:rotate(-1.5deg);box-shadow:0 1px 1px rgba(40,20,5,.25),0 6px 14px -4px rgba(40,20,5,.35)}.ds-label h2{margin:0;font:900 2.6rem/.95 Archivo,'Arial Narrow',sans-serif;font-stretch:70%;text-transform:uppercase;letter-spacing:.005em;color:#1B1B1B}.ds-tape{position:absolute;top:-14px;left:18px;width:80px;height:28px;background:rgba(250,243,214,.72);box-shadow:0 1px 2px rgba(40,20,5,.2);clip-path:polygon(3% 0,100% 6%,97% 100%,0 92%);transform:rotate(-8deg)}"
+    },
+    {
+      "name": "Sticky Note",
+      "kind": "card",
+      "refersTo": "sticky-note",
+      "description": "Highlighter-yellow note for an aside or secondary offer.",
+      "html": "<div class=\"ds-board\"><div class=\"ds-note\"><b>Hechas para negocios reales</b> de Bucaramanga, Bogotá y Medellín.</div></div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Lexend:wght@400;600;700&family=Permanent+Marker&display=swap');.ds-board{background:#B98A5C;padding:32px}.ds-note{background:#FFE14A;color:#1B1B1B;padding:16px 18px;font:400 1.02rem/1.55 Lexend,system-ui,sans-serif;transform:rotate(2deg);max-width:320px;box-shadow:0 1px 1px rgba(40,20,5,.25),0 6px 14px -4px rgba(40,20,5,.35)}"
+    },
+    {
+      "name": "Muestra Stamp",
+      "kind": "chip",
+      "refersTo": "stamp",
+      "description": "Rubber stamp marking unpublished sample work.",
+      "html": "<span class=\"ds-stamp\">Muestra</span>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Lexend:wght@400;600;700&family=Permanent+Marker&display=swap');.ds-stamp{display:inline-block;font:900 .78rem/1.2 Archivo,'Arial Narrow',sans-serif;font-stretch:75%;text-transform:uppercase;letter-spacing:.12em;color:#C8102E;border:2.5px solid #C8102E;border-radius:4px;padding:1px 7px;transform:rotate(-6deg);opacity:.9}"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Printed form field: white, 2px ink border, yellow focus ring.",
+      "html": "<label class=\"ds-field\"><span>Tu nombre</span><input class=\"ds-input\" placeholder=\"Ej: Camila\"></label>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Lexend:wght@400;600;700&family=Permanent+Marker&display=swap');.ds-field span{display:block;font:700 1rem Lexend,system-ui,sans-serif;margin-bottom:8px;color:#1B1B1B}.ds-input{width:100%;max-width:320px;min-height:48px;border:2px solid #1B1B1B;border-radius:6px;background:#fff;padding:10px 12px;font:400 1rem Lexend,system-ui,sans-serif;color:#1B1B1B}.ds-input:focus{outline:3px solid #FFE14A;outline-offset:0}"
+    },
+    {
+      "name": "Choice Chips",
+      "kind": "chip",
+      "refersTo": "choice-chip",
+      "description": "Day and hour pickers; selected inverts to ink, disabled strikes through.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">2:00 pm</button><button class=\"ds-chip\" aria-pressed=\"false\">3:00 pm</button><button class=\"ds-chip\" disabled>mié</button></div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Lexend:wght@400;600;700&family=Permanent+Marker&display=swap');.ds-chips{display:flex;gap:8px;flex-wrap:wrap}.ds-chip{border:2px solid #1B1B1B;background:#FBF8F0;color:#1B1B1B;border-radius:6px;padding:10px 14px;min-height:44px;font:700 1rem Lexend,system-ui,sans-serif;cursor:pointer}.ds-chip[aria-pressed=true]{background:#1B1B1B;color:#FBF8F0}.ds-chip:focus-visible{outline:3px solid #1B1B1B;outline-offset:3px}.ds-chip:disabled{border-color:#c4bdb0;color:#6E6A62;background:#F3EEE1;text-decoration:line-through;cursor:not-allowed}"
+    },
+    {
+      "name": "Wooden Frame Nav",
+      "kind": "nav",
+      "refersTo": "nav-frame",
+      "description": "Sticky wooden board frame carrying brand, links and the compact WhatsApp button.",
+      "html": "<header class=\"ds-frame\"><b class=\"ds-brand\">Vitrina Barrio</b><nav><a href=\"#\">Muestras</a><a href=\"#\">Precio</a><a href=\"#\">Preguntas</a></nav><a class=\"ds-wa\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.55 2 2.07 6.48 2.07 12c0 1.76.46 3.48 1.34 5L2 22l5.16-1.35a9.94 9.94 0 0 0 4.88 1.24h.01c5.49 0 9.97-4.48 9.97-9.97a9.9 9.9 0 0 0-2.97-7.01zm-7.01 15.36h-.01a8.27 8.27 0 0 1-4.21-1.15l-.3-.18-3.14.82.84-3.06-.2-.32a8.26 8.26 0 0 1-1.27-4.41c0-4.57 3.72-8.29 8.3-8.29 2.21 0 4.29.86 5.85 2.43a8.23 8.23 0 0 1 2.44 5.86c0 4.57-3.73 8.3-8.3 8.3zm4.55-6.21c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.02 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.17-.48-.29z\"/></svg>Escríbenos</a></header>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Lexend:wght@400;600;700&family=Permanent+Marker&display=swap');.ds-frame{display:flex;align-items:center;gap:16px;height:56px;padding:0 24px;background:linear-gradient(180deg,#6A4428,#5B3A21 55%,#3F2715);border-bottom:3px solid #2E1B0E;color:#F6E9D2}.ds-brand{font:800 1.15rem Archivo,'Arial Narrow',sans-serif;font-stretch:85%;white-space:nowrap}.ds-frame nav{display:flex;gap:4px;margin-left:auto}.ds-frame nav a{color:inherit;text-decoration:none;font:700 .95rem Lexend,system-ui,sans-serif;padding:8px 12px;border-radius:6px}.ds-frame nav a:hover{background:rgba(255,240,210,.12)}.ds-frame a:focus-visible{outline:3px solid #F6E9D2;outline-offset:2px}.ds-wa{display:inline-flex;align-items:center;gap:8px;background:#157F3F;color:#fff;text-decoration:none;font:700 .95rem Lexend,system-ui,sans-serif;padding:8px 14px;border-radius:8px;min-height:40px}.ds-wa svg{width:20px;height:20px}.ds-wa:hover{transform:translateY(-2px)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "La cartelera del barrio",
+    "overview": "Vitrina Barrio advertises the way the neighbourhood advertises: a photocopied flyer pinned to the cork board outside the panadería, with a row of tear-off tabs carrying the WhatsApp number. The whole page is that board. Warm cork fills every pixel behind the content; every piece of content is a physical scrap of paper (a flyer, a printed screenshot, a receipt, an index card, a sticky note) held up by a tack or a strip of tape, each one slightly crooked. The wooden frame of the board is the navigation and the footer.\n\nThe world is handmade but not sloppy. Paper is off-white and printed in black ink; the only voices on top of print are the ones a shop owner would actually use: a yellow highlighter, a red marker, a rubber stamp. Density is generous and legible for owners reading on a mid-range phone: large body type (18px), big tap targets (44 to 48px), short lines. Interaction is physical: what you touch lifts off the board, and a tear-off tab actually tears away when you take one.\n\nThe world explicitly rejects the dark agency hero with floating device mockups and tiered pricing cards, and with it the startup look of the previous site (dark navy, coral, gold).",
+    "keyCharacteristics": [
+      "Full-bleed cork texture (layered radial-gradient grain) as the only page background.",
+      "Every content block is paper: square corners, a soft peel shadow, a tilt between -3deg and 3deg, usually a tack or tape.",
+      "Three type voices: condensed printed headlines, plain typed body, handwritten marker notes.",
+      "WhatsApp green appears only on things that open WhatsApp.",
+      "Motion is paper physics: lift on hover, tear-and-fall on the tabs, nothing else."
+    ],
+    "rules": [
+      {
+        "name": "The Reserved Green Rule",
+        "body": "WhatsApp green (`whatsapp`, `whatsapp-ink`, `tab-mint`) is used only on elements that open WhatsApp. Nothing decorative, no success states, no other links. If it is green, tapping it writes to Vitrina Barrio.",
+        "section": "colors"
+      },
+      {
+        "name": "The Shop-Owner Accents Rule",
+        "body": "Red is a marker and yellow is a highlighter: they annotate print, they never become the print. Red never fills a surface; yellow never colours text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Hands Rule",
+        "body": "Each voice has one job: Archivo prints, Lexend types, Permanent Marker writes. Handwriting is for short notes of a line or so (a price condition, \"Ojo:\", \"sin letra pequeña\"); never paragraphs, never buttons.",
+        "section": "typography"
+      },
+      {
+        "name": "The Nothing Hangs Straight Rule",
+        "body": "Every paper piece is rotated: large sheets between 0.4 and 1.2 degrees, small prints and notes up to 3 degrees, alternating direction between neighbours. Content inside the paper is never rotated further, except handwritten notes and stamps, which carry their own tilt (-2 to -6deg).",
+        "section": "layout"
+      },
+      {
+        "name": "The Peel Rule",
+        "body": "A shadow reports how far the paper has lifted, nothing else. Rest is low, touch is higher; no glow, no coloured shadow, no shadow on anything that is not a physical object on the board.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep the full-bleed cork as the only page background, and put every piece of content on paper.",
+      "**Do** rotate every paper piece (0.4 to 3deg, alternating) and fasten primary sheets with a tack or tape.",
+      "**Do** reserve green for WhatsApp: every green thing opens WhatsApp, and every WhatsApp action is green.",
+      "**Do** annotate in Marker Red with Permanent Marker for short notes only, and highlight with Highlighter Yellow as a stroke or a sticky note.",
+      "**Do** set headlines in heavy condensed Archivo (width 68 to 80%) uppercase, and body in Lexend at 18px.",
+      "**Do** keep tap targets at 44px minimum (48px for primary buttons and inputs).",
+      "**Do** let touched paper lift (Paper lifted shadow, 0.3 to 0.35s, cubic-bezier(.2,.8,.2,1)) and turn all paper motion off under reduced motion.",
+      "**Do** mark unpublished sample work with the red \"Muestra\" stamp."
+    ],
+    "donts": [
+      "**Don't** build a dark agency hero, floating device mockups, or tiered pricing cards; price lives on a receipt.",
+      "**Don't** use green for anything that does not open WhatsApp, including success states.",
+      "**Don't** round the corners of paper pieces or outline them with a border; edges come from cutting, tape, tears and the receipt's pad stub.",
+      "**Don't** fill surfaces with Marker Red or set text in Highlighter Yellow.",
+      "**Don't** set paragraphs or buttons in Permanent Marker.",
+      "**Don't** use coloured glows or shadows on things that are not physical objects on the board.",
+      "**Don't** use decorative gradients; gradients exist only to render materials (cork grain, the wooden frame, the highlighter stroke, index-card ruling, tack heads)."
+    ]
+  }
+}

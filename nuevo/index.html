@@ -170,7 +170,7 @@ h1 mark{background:linear-gradient(transparent 58%, var(--hi) 58% 92%, transpare
 .price{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;margin:0 0 6px}
 .price .amt{position:relative;font-family:var(--display);font-stretch:80%;font-weight:900;font-size:clamp(2.3rem,5vw,3.3rem);line-height:1;padding:6px 16px 6px 28px}
 .price .amt small{font-size:.38em;font-weight:800;margin-left:4px;letter-spacing:.04em}
-.price .amt svg{position:absolute;inset:-6px -14px -8px -10px;width:calc(100% + 24px);height:calc(100% + 14px);overflow:visible;pointer-events:none}
+.price .amt svg{color:var(--marker);position:absolute;inset:-6px -14px -8px -10px;width:calc(100% + 24px);height:calc(100% + 14px);overflow:visible;pointer-events:none}
 .price .note{font-size:clamp(1rem,1.6vw,1.2rem);max-width:26ch;transform:rotate(-3deg);margin:0}
 .later{margin:0;color:var(--ink-2);font-size:.98rem}
 .free{margin:10px 0 0;font-weight:700;font-size:1.05rem}
@@ -219,6 +219,7 @@ h1 mark{background:linear-gradient(transparent 58%, var(--hi) 58% 92%, transpare
 .print img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;background:#ddd}
 .print figcaption{font-size:.95rem;margin-top:10px;display:flex;justify-content:space-between;gap:8px;align-items:baseline}
 .print figcaption b{font-family:var(--display);font-stretch:85%;font-weight:800;font-size:1.05rem}
+.stamp.done{color:var(--ink);border-color:var(--ink)}
 .stamp{
   display:inline-block;font-family:var(--display);font-stretch:75%;font-weight:900;text-transform:uppercase;letter-spacing:.12em;
   color:var(--marker);border:2.5px solid var(--marker);border-radius:4px;padding:1px 7px;font-size:.78rem;transform:rotate(-6deg);opacity:.9;
@@ -277,6 +278,7 @@ section{max-width:1280px;margin:0 auto;padding:clamp(40px,7vw,96px) var(--pad) 0
 .wall .print > .tape{top:-12px;left:12px;transform:rotate(-10deg)}
 .wall .print p{margin:6px 0 0;font-size:.95rem;color:var(--ink-2)}
 .wall a.print{text-decoration:none;display:block}
+.live svg{width:20px;height:12px}
 .live{display:inline-flex;gap:6px;align-items:center;font-weight:700;color:var(--ink);margin-top:8px;text-decoration:underline;text-underline-offset:3px}
 .wall .print:hover{transform:rotate(0) translateY(-6px) scale(1.01);box-shadow:0 2px 2px rgba(40,20,5,.2), 0 22px 30px -10px rgba(40,20,5,.5);z-index:2}
 
@@ -329,8 +331,12 @@ section{max-width:1280px;margin:0 auto;padding:clamp(40px,7vw,96px) var(--pad) 0
 .faq details:nth-child(even){--r:.7deg}
 .faq summary{cursor:pointer;list-style:none;padding:18px 52px 18px 20px;font-weight:700;font-size:1.08rem;position:relative}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:20px;top:12px;font-family:var(--hand);color:var(--marker);font-size:1.8rem;line-height:1}
-.faq details[open] summary::after{content:"–"}
+.faq summary::after{
+  content:"";position:absolute;right:20px;top:50%;width:18px;height:18px;margin-top:-9px;
+  background:linear-gradient(var(--marker),var(--marker)) center/18px 3px no-repeat, linear-gradient(var(--marker),var(--marker)) center/3px 18px no-repeat;
+  transition:background-size .2s;
+}
+.faq details[open] summary::after{background-size:18px 3px, 3px 0}
 .faq .ans{padding:0 20px 20px;color:var(--ink-2)}
 
 /* Agenda: tarjeta de cita */
@@ -491,7 +497,7 @@ footer{
       <div class="price">
         <div class="amt">
           $110.000<small>COP</small>
-          <svg viewBox="0 0 200 80" preserveAspectRatio="none" aria-hidden="true"><path d="M18 46 C 14 18, 70 6, 118 8 C 168 10, 196 26, 192 44 C 188 64, 140 76, 92 74 C 46 72, 8 62, 12 40 C 14 30, 30 20, 52 14" fill="none" stroke="#C8102E" stroke-width="3.2" stroke-linecap="round"/></svg>
+          <svg viewBox="0 0 200 80" preserveAspectRatio="none" aria-hidden="true"><path d="M18 46 C 14 18, 70 6, 118 8 C 168 10, 196 26, 192 44 C 188 64, 140 76, 92 74 C 46 72, 8 62, 12 40 C 14 30, 30 20, 52 14" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg>
         </div>
         <p class="note hand">pago único · precio de lanzamiento para los 5 primeros</p>
       </div>
@@ -592,9 +598,9 @@ footer{
     <a class="print paper m5" href="/zapateria/" target="_blank" rel="noopener">
       <span class="tape" aria-hidden="true"></span>
       <img src="/img/zapateria.jpg" width="1440" height="900" loading="lazy" alt="Catálogo de Tu Zapatería con tenis en 3D">
-      <figcaption><b>Tu Zapatería</b> <span>Publicada</span></figcaption>
+      <figcaption><b>Tu Zapatería</b> <span class="stamp done">Publicada</span></figcaption>
       <p>Catálogo de tenis con modelos en 3D que giran.</p>
-      <span class="live">Verla funcionando →</span>
+      <span class="live">Verla funcionando <svg viewBox="0 0 20 12" aria-hidden="true"><path d="M1 6h16M12 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
     </a>
   </div>
 </section>
