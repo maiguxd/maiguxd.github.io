@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Muestra · Blanca Baron</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:400 17px/1.55 "Figtree",system-ui,sans-serif;background:#FBF1F0;color:#35152B;padding-bottom:96px;overflow-x:clip}
+a{color:inherit}
+:focus-visible{outline:3px solid #F2B8A9;outline-offset:3px}
+.aviso{background:#1d1d1d;color:#fff;font-size:.85rem;text-align:center;padding:8px 16px}
+.hero{background:#5B1F47;color:#FFF4F1;position:relative;overflow:hidden;padding:28px 20px 40px}
+.wrap{max-width:920px;margin:0 auto;position:relative}
+.marca{font-family:"Gloock",serif;font-size:1.35rem;line-height:1.1}
+.marca small{display:block;font:600 .85rem "Figtree",sans-serif;opacity:.85;margin-top:2px}
+h1{font-family:"Gloock",serif;font-weight:900;font-size:clamp(2.2rem,8.5vw,4.2rem);line-height:1.04;margin:28px 0 14px;max-width:13ch;text-wrap:balance}
+.hero p{max-width:34ch;margin:0 0 18px;font-size:1.08rem}
+.datos{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:0 0 22px;font-weight:600}
+.estrella{color:#F2B8A9}
+.estado{border:2px solid #F2B8A9;border-radius:99px;padding:2px 12px;font-size:.92rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 24px;border-radius:12px;background:#137A3C;color:#fff;font-weight:800;text-decoration:none}
+main{max-width:920px;margin:0 auto;padding:0 20px}
+section{padding-top:44px}
+h2{font-family:"Gloock",serif;font-size:clamp(1.7rem,5vw,2.4rem);line-height:1.1;margin:0 0 16px}
+.lista{list-style:none;margin:0;padding:0;border-top:2px solid #E7CFD0}
+.lista li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 20px;padding:15px 0;border-bottom:2px solid #E7CFD0}
+.lista b{font-size:1.12rem}
+.lista span{color:#6B4A61}
+.nota{font-size:.9rem;color:#6B4A61;margin:10px 0 0}
+.fotos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.foto{aspect-ratio:4/5;border:2px dashed #6B4A61;border-radius:999px 999px 14px 14px;display:grid;place-items:end center;padding:14px 8px;text-align:center;color:#6B4A61;font-size:.92rem;background:#FFFFFF}
+table{width:100%;border-collapse:collapse;background:#FFFFFF;border-radius:14px;overflow:hidden}
+td{padding:11px 16px;border-bottom:1px solid #E7CFD0;text-transform:capitalize}
+td+td{text-align:right;text-transform:none;font-variant-numeric:tabular-nums}
+tr.hoy td{background:#F2B8A9;color:#1d1208;font-weight:800}
+.mapa{display:inline-block;margin-top:6px;font-weight:800;text-underline-offset:4px}
+footer{max-width:920px;margin:44px auto 0;padding:18px 20px;border-top:2px solid #E7CFD0;font-size:.9rem;color:#6B4A61}
+.barra{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:#FFFFFF;box-shadow:0 -6px 18px -10px rgba(0,0,0,.4);z-index:5}
+.barra .btn{display:flex;max-width:520px;margin:0 auto}
+.arco{position:absolute;right:-40px;top:0;width:180px;height:230px;border:3px solid #F2B8A9;border-radius:999px 999px 0 0;padding:14px;opacity:.55}
+.arco div{height:100%;border:3px solid #F2B8A9;border-radius:999px 999px 0 0}
+.poste{position:absolute;right:0;top:-28px;bottom:-40px;width:26px;background:repeating-linear-gradient(135deg,#B8322A 0 18px,#F3F1E6 18px 36px,#2B5C8A 36px 54px,#F3F1E6 54px 72px)}
+.olla{position:absolute;right:-36px;top:-8px;width:170px}
+@media (max-width:700px){.poste{width:12px;right:-20px}.arco{opacity:.35;right:-80px}.fotos{grid-template-columns:1fr 1fr}.foto:last-child{grid-column:1/-1;aspect-ratio:16/10;border-radius:14px}}
+@media (min-width:701px){.olla{width:300px;right:0;top:80px}.arco{width:300px;height:400px;right:0;top:20px;opacity:.8}}
+</style>
+</head>
+<body>
+<div class="aviso">Muestra de diseño de Vitrina Barrio. No es la página oficial del negocio.</div>
+<header class="hero">
+  <div class="wrap">
+    <div class="arco" aria-hidden="true"><div></div></div>
+    <div style="position:relative">
+      <div class="marca">Blanca Baron<small>Peluquería en Cabecera</small></div>
+      <h1>Color, corte y uñas en Cabecera</h1>
+      <p>Escoge tu horario y pide la cita por WhatsApp, en un toque.</p>
+      <div class="datos"><span><span class="estrella" aria-hidden="true">★</span> 4,8 en Google · 136 reseñas</span><span class="estado" id="estado">Consulta el horario</span></div>
+      <a class="btn" href="https://wa.me/573123695689?text=Hola%2C%20quiero%20pedir%20una%20cita%20en%20la%20peluquer%C3%ADa" target="_blank" rel="noopener">Pedir cita por WhatsApp</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section aria-labelledby="s"><h2 id="s">Servicios</h2>
+    <ul class="lista"><li><b>Color</b><span>Tintes, mechas y retoques</span></li><li><b>Corte y peinado</b><span>Para el día a día o un evento</span></li><li><b>Uñas</b><span>Manicure, pedicure y diseños</span></li><li><b>Tratamientos</b><span>Cuidado e hidratación del cabello</span></li></ul>
+    <p class="nota">Lista de ejemplo: aquí va la de ustedes, con precios si quieren mostrarlos.</p>
+  </section>
+  <section aria-labelledby="f"><h2 id="f">Fotos</h2>
+    <div class="fotos"><div class="foto">Aquí va su foto:<br>Un trabajo de color</div><div class="foto">Aquí va su foto:<br>Un diseño de uñas</div><div class="foto">Aquí va su foto:<br>El salón</div></div>
+  </section>
+  <section aria-labelledby="h"><h2 id="h">Horario</h2>
+    <table><tr data-d="1"><td>lunes</td><td>8:00 a. m. a 7:00 p. m.</td></tr><tr data-d="2"><td>martes</td><td>8:00 a. m. a 7:00 p. m.</td></tr><tr data-d="3"><td>miércoles</td><td>8:00 a. m. a 7:00 p. m.</td></tr><tr data-d="4"><td>jueves</td><td>8:00 a. m. a 7:00 p. m.</td></tr><tr data-d="5"><td>viernes</td><td>8:00 a. m. a 7:00 p. m.</td></tr><tr data-d="6"><td>sábado</td><td>8:00 a. m. a 7:00 p. m.</td></tr><tr data-d="0"><td>domingo</td><td>Cerrado</td></tr></table>
+  </section>
+  <section aria-labelledby="d"><h2 id="d">Dónde estamos</h2>
+    <p>Cra 34 #51-92, Cabecera del Llano, Bucaramanga<br>WhatsApp 312 369 5689</p>
+    <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Blanca%20Baron%20Cra%2034%20%2351-92%2C%20Cabecera%20del%20Llano%2C%20Bucaramanga" target="_blank" rel="noopener">Cómo llegar en Google Maps</a>
+  </section>
+</main>
+<footer>Datos tomados de la ficha pública en Google en noviembre de 2026; se confirman con el negocio antes de publicar.</footer>
+<div class="barra"><a class="btn" href="https://wa.me/573123695689?text=Hola%2C%20quiero%20pedir%20una%20cita%20en%20la%20peluquer%C3%ADa" target="_blank" rel="noopener">Pedir cita por WhatsApp</a></div>
+<script>
+(function(){
+  var H=[null,[8,19],[8,19],[8,19],[8,19],[8,19],[8,19]], now=new Date(Date.now()-5*36e5), d=now.getUTCDay(), h=now.getUTCHours()+now.getUTCMinutes()/60, t=H[d];
+  document.getElementById('estado').textContent = t && h>=t[0] && h<t[1] ? 'Abierto ahora' : 'Cerrado ahora';
+  var row=document.querySelector('tr[data-d="'+d+'"]'); if(row) row.className='hoy';
+})();
+</script>
+</body>
+</html>
